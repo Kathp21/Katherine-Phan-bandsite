@@ -1,0 +1,102 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.header {
+    background-color: $bandsite-black;
+    width: 100%;
+
+    &__nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__nav-logo {
+        text-decoration: none;
+        margin-left: 33%;
+    }
+
+    &__title {
+        color: $white;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    &__nav-link {
+        color: $white;
+        text-decoration: none;
+        
+        &--active {
+            border-bottom:  2px solid white;
+            padding-bottom: 20%;
+        }
+    }
+}
+
+//Mobile 
+@include mobile {
+    .header__nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header__nav-logo {
+        text-decoration: none;
+        margin-left: 33%;
+    }
+
+    .header__nav-list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+//hero section
+.hero {
+    
+    
+    &__background {
+        width: 100%;
+        height: 100%; /* Set height to 100% to make 'object-fit: cover' work */
+        object-fit: cover; /* This will make the image cover the entire container, maintaining aspect ratio */
+        display: relative;
+        margin: 0 auto;
+        background-color: $bandsite-black;
+        opacity: 50%;
+
+        // @include mobile {
+        //     width: 100%;
+        //     height: 50vh;
+        // }
+    }
+
+    &__title-position {
+        position: absolute;
+        bottom: 56%;
+        margin-left: 12%;
+    }
+
+    &__title {
+        color: $white;        
+    }
+}
+
+//Main Section 
+.main__title {
+    margin-left: 5%;
+    margin-bottom: 0;
+}
+.main__image {
+    width: 100%;
+    height: 36vh; 
+    object-fit: cover; 
+    margin: 0 auto;
+    padding: 3%;
+}
