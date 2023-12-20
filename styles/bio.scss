@@ -1,5 +1,7 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
+@use './partials/global' as *;
+
 
 .header {
     background-color: $bandsite-black;
@@ -18,6 +20,7 @@
 
     &__title {
         color: $white;
+
     }
 
     &__nav-list {
@@ -25,16 +28,24 @@
         justify-content: space-around;
         list-style: none;
         padding-left: 0;
+        margin: 0;
     }
 
     
     &__nav-link {
         color: $white;
         text-decoration: none;
+        display: inline-block;
+        width: 50vw;
+        text-align: center;
+
+        @include tablet {
+            width: fit-content;
+        }
         
         &--active {
             border-bottom:  2px solid white;
-            padding-bottom: 20%;
+            padding-bottom: 10%;
 
 
         }
@@ -70,12 +81,15 @@
 
     &__title-position {
         position: absolute;
-        bottom: 56%;
-        margin-left: 12%;
+        bottom: 50%;
+        margin: auto 10%;
     }
 
     &__title {
-        color: $white;        
+        color: $white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        
     }
 }
 
@@ -83,11 +97,31 @@
 .main__title {
     margin-left: 5%;
     margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 44px;
 }
 .main__image {
     width: 100%;
     height: 36vh; 
     object-fit: cover; 
     margin: 0 auto;
-    padding: 3%;
+    padding: 0 3%;
+}
+
+.quotation {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+    padding: 3%
+}
+
+.band {
+    padding: 0 3% 3% 3%;
+    font-size: 0.9rem;
+    line-height: 1.125rem;
+
+    &__title {
+        margin-top: 0;
+    }
 }
