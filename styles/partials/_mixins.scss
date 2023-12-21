@@ -17,3 +17,9 @@
     @content;
   }
 }
+
+@mixin small-text() {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
