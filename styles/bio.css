@@ -102,18 +102,21 @@ body {
 
 .main__image {
   width: 100%;
-  height: 36vh;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
-  padding: 0 3%;
+  padding: 0 1rem;
 }
 
 .quotation {
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.375rem;
-  padding: 3%;
+  padding: 1rem;
+}
+.quotation__text {
+  margin-top: 0;
 }
 
 .band {
@@ -131,9 +134,40 @@ body {
 .gallery__title {
   margin-top: 0;
   padding-top: 1.25rem;
+  padding-left: 3%;
 }
 .gallery__items {
   width: 100%;
   height: 100%;
+  padding: 0 1rem;
   padding-bottom: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+}
+.footer__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 1.5rem 0 0 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+.footer__social-icon {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 70%;
+}
+.footer__icon {
+  margin-left: 26%;
+}
+.footer__contact-info {
+  color: #ffffff;
+  padding: 0 1rem 1rem 1rem;
+}
+.footer__name {
+  margin-bottom: 0;
+}
+.footer__subtitle {
+  margin-top: 0;
 }/*# sourceMappingURL=bio.css.map */
