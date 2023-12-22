@@ -142,10 +142,19 @@
 
 
     @include tablet {
-        padding: 0 3rem;
+        padding: 0 4rem;
     }
 
     &__text {
+        @include tablet {
+        margin-top: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        }
+    }
+
+    &__footer {
         margin-top: 0;
     }
 }
@@ -165,12 +174,13 @@
             line-height: 2rem;
             padding-left: 3rem;
             margin-bottom: 0;
+            padding-top: 1.5rem;
         }
     }
 
     &__text {
         @include tablet {
-            padding: 0 3rem;
+            padding: 0 3rem 1rem 3rem;
             display: flex;
             gap: 2rem;
             font-size: 0.875rem;
@@ -186,6 +196,23 @@
         margin-top: 0;
         padding-top: 1.25rem;
         padding-left: 3%;
+
+        @include tablet {
+            padding-left: 1.5rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    &__list {
+         @include tablet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 0 1rem 1rem 0.3rem;
+    }
     }
 
     &__items {
@@ -193,11 +220,25 @@
         height: 100%;
         padding:0 1rem;
         padding-bottom: 1rem;
+
+        @include tablet {
+            height: 24vh;
+            width: 31vw;
+            padding-right: 0;
+        }
     }
 }
 
 .footer {
     background-color: $bandsite-black;
+
+    &__container {
+        @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        }
+    }
 
     &__title {
         color: $white;
@@ -211,6 +252,10 @@
         display: flex;
         justify-content: space-evenly;
         padding-right: 70%;
+
+        @include tablet {
+            padding-right: 0;
+        }
     }
 
     &__icon {
@@ -220,6 +265,11 @@
     &__contact-info {
         color: $white;
         padding: 0 1rem 1rem 1rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__name {
