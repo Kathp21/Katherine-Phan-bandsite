@@ -5,17 +5,28 @@
 
 .header {
     background-color: $bandsite-black;
-    width: 100%;
+    padding: 0 1rem;
+    @include tablet {
+    padding: 0 1rem;
+    }
 
     &__nav-container {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5rem;
+
+        }
     }
 
     &__nav-logo {
         text-decoration: none;
-        margin-left: 33%;
+        // margin-left: 33%;
     }
 
     &__title {
@@ -28,7 +39,13 @@
         justify-content: space-around;
         list-style: none;
         padding-left: 0;
-        margin: 0;
+        margin-bottom: 0;
+        
+        @include tablet {
+            gap: 3rem;
+            margin-bottom: 0;
+            margin-top: 20%;
+            }
     }
 
     
@@ -46,59 +63,75 @@
         &--active {
             border-bottom:  2px solid white;
             padding-bottom: 10%;
-
+            
+            @include tablet {
+                padding-bottom: 30%;
+                }
 
         }
     }
 }
 
-//Tablet
-@media (min-width: 48rem) {
-    .header__nav-container {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-    }
-}
-
-
-
+// //Tablet
+// @media (min-width: 48rem) {
+//     .header__nav-container {
+//         display: flex;
+//         flex-direction: row;
+//         align-items: stretch;
+//     }
+// }
 
 //hero section
 .hero {
         position: relative;
         height: 35vh;
-        background-image: url(../assets/Images/hero-bio.jpg);
+        background-image: url(../assets/images/hero-bio.jpg), linear-gradient(rgba(50,50,50,60%), rgba(50,50,50,60%));
         background-size: cover;
         background-position: center;
+        background-blend-mode: overlay;
         display: flex;
         align-items: center;
         justify-content: flex-start;
 
+        @include tablet {
+            height: 86vh;
+        }
 
-    &__title {
-        background-color: rgba($color: $bandsite-black, $alpha: 50%);
-    }
     &__text {
         color: $white;
         margin-left: 5%;
+
+        @include tablet {
+            @include header-mobile;
+        }
     }
 }
 
 //Main Section 
-.main__title {
+.main-title {
     padding: 1.5rem 0 1rem 1rem;
     margin: 0;
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 44px;
+
+    @include tablet {
+        padding: 3rem 3rem 0 1.5rem;
+        font-size: 2.5rem;
+    }
 }
-.main__image {
+.main-image {
     width: 100%;
     height: 30vh; 
     object-fit: cover; 
     margin: 0 auto;
     padding: 0 1rem;
+
+    @include tablet {
+        height: 80vh;
+        padding: 2rem 4rem 4rem 4rem;
+
+    }
 }
 
 .quotation {
@@ -107,13 +140,17 @@
     line-height: 1.375rem;
     padding: 1rem 1rem 0 1rem;
 
+
+    @include tablet {
+        padding: 0 3rem;
+    }
+
     &__text {
         margin-top: 0;
     }
 }
 
 .band {
-    // padding: 0 3% 3% 3%;
     margin: 0 1rem;
     font-size: 0.9rem;
     line-height: 1.125rem;
@@ -121,6 +158,24 @@
     &__title {
         margin-top: 0;
         @include small-text;
+
+        @include tablet {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        @include tablet {
+            padding: 0 3rem;
+            display: flex;
+            gap: 2rem;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
     }
 }
 
@@ -186,8 +241,9 @@
 
     &__copyright {
         color: $white;
-        font-weight: 400;
         margin-bottom: 0;
+        @include small-text();
+        
     }
 }
 
