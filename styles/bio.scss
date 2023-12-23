@@ -25,8 +25,8 @@
     }
 
     &__nav-logo {
-        text-decoration: none;
-        // margin-left: 33%;
+        height: 3vh;
+        margin-top: 3%;
     }
 
     &__title {
@@ -237,15 +237,23 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        padding-top: 3%;
         }
     }
 
     &__title {
         color: $white;
-        font-size: 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
         padding: 1.5rem 0 0 1rem;
         margin-bottom: 1.5rem;
         margin-top: 0;
+
+        @include tablet {
+            font-size: 1.5rem;
+            padding-left: 0;
+
+        }
     }
 
     &__social-icon {
@@ -254,12 +262,13 @@
         padding-right: 70%;
 
         @include tablet {
-            padding-right: 0;
+            padding-right: 48%;
         }
     }
 
     &__icon {
         margin-left: 26%;
+        padding-right: 10%;
     }
 
     &__contact-info {
@@ -269,11 +278,14 @@
         @include tablet {
             display: flex;
             justify-content: space-between;
+            padding: 0 3%;
+            
         }
     }
 
     &__name {
         margin-bottom: 0;
+
     }
     &__details {
         margin-top: 0;
@@ -287,12 +299,24 @@
    
     &__logo-name {
         font-weight: 400;
+
+        @include tablet {
+        opacity: 0;
+        margin: 0;
+        font-size: 0;
+        }
     }
 
     &__copyright {
         color: $white;
         margin-bottom: 0;
         @include small-text();
+
+        @include tablet {
+            margin-bottom: 3%;
+            margin-left: 2%;
+            
+        }
         
     }
 }
