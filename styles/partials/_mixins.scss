@@ -18,14 +18,17 @@
   }
 }
 
-@mixin small-text() {
-  font-size: 0.9rem;
-  line-height: 1.125rem;
+@mixin text-regular($font-size) {
+  font-size: $font-size;
   font-weight: 400;
 }
 
-@mixin header-mobile() {
-  font-size: 3.75rem;
-  font-weight: 600;
+@mixin text-demi($font-size) {
+  font-size: $font-size;
+  font-weight: 500;
+}
 
+@mixin text-bold($font-size) {
+  font-size: $font-size;
+  font-weight: 600;
 }
