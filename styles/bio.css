@@ -281,9 +281,7 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .gallery__list {
-    display: flex;
-    flex-direction: row;
-    padding: 0 12% 2% 6%;
+    padding: 0 4% 2% 8%;
   }
 }
 .gallery__items {
@@ -297,6 +295,13 @@ body {
     height: 24vh;
     width: 31vw;
     padding-right: 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .gallery__items {
+    height: 27vh;
+    width: 26vw;
+    padding-bottom: 2.5rem;
   }
 }
 

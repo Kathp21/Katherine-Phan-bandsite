@@ -255,12 +255,10 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             padding: 0 1rem 1.5rem 0.3rem;
-    }
-        @include desktop {
-            display: flex;
-            flex-direction: row;
-            
-            padding: 0 12% 2% 6%;
+        }
+        
+        @include desktop {     
+            padding: 0 4% 2% 8%;
         }
     }
 
@@ -274,6 +272,12 @@
             height: 24vh;
             width: 31vw;
             padding-right: 0;
+        }
+
+        @include desktop {
+            height: 27vh;
+            width: 26vw;
+            padding-bottom: 2.5rem;
         }
     }
 }
