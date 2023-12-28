@@ -6,8 +6,13 @@
 .header {
     background-color: $bandsite-black;
     padding: 0 1rem;
+    
     @include tablet {
     padding: 0 1rem;
+    }
+
+    @include desktop {
+        padding-left: 10%;
     }
 
     &__nav-container {
@@ -110,7 +115,12 @@
         @include tablet {
             @include text-bold(3.75rem);
         }
+
+        @include desktop {
+            padding-left: 8%;
+        }
     }
+
 }
 
 //Main Section 
@@ -125,6 +135,10 @@
         padding: 3rem 3rem 0 1.5rem;
         @include text-bold(2.5rem);
     }
+
+    @include desktop {
+        padding-left: 12%;
+    }
 }
 .main-image {
     width: 100%;
@@ -136,7 +150,12 @@
     @include tablet {
         height: 80vh;
         padding: 2rem 4rem 4rem 4rem;
+    }
 
+    @include desktop {
+        height: 54vh;
+        width: 100vw;
+        padding: 3% 20% 3% 20%;
     }
 }
 
@@ -148,6 +167,10 @@
 
     @include tablet {
         padding: 0 4rem;
+    }
+
+    @include desktop {
+        padding: 0 23% 0 20%;
     }
 
     &__text {
@@ -179,7 +202,11 @@
             padding-left: 3rem;
             margin-bottom: 0;
             padding-top: 1.5rem;
-            @include text-demi(1.5rem)
+            @include text-bold(1.5rem);
+        }
+
+        @include desktop {
+            padding-left: 20%;
         }
     }
 
@@ -192,6 +219,10 @@
             gap: 2rem;
             @include text-regular(0.875rem);
             line-height: 1.375rem;
+        }
+
+        @include desktop {
+            padding: 0 19% 2% 20%;
         }
     }
 }
@@ -207,8 +238,13 @@
 
         @include tablet {
             padding-left: 1.5rem;
+            padding-top: 6%;
             line-height: 2rem;
             @include text-bold(2.25rem);
+        }
+
+        @include desktop {
+            padding-left: 12%;
         }
     }
 
@@ -218,8 +254,14 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            padding: 0 1rem 1rem 0.3rem;
+            padding: 0 1rem 1.5rem 0.3rem;
     }
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            
+            padding: 0 12% 2% 6%;
+        }
     }
 
     &__items {
@@ -258,7 +300,10 @@
         @include tablet {
             padding-left: 0;
             @include text-bold(2.25rem)
+        }
 
+        @include desktop {
+            padding-left: 9%;
         }
     }
 
@@ -284,6 +329,10 @@
         @include tablet {
             opacity: 1;
         }
+
+        @include desktop {
+            padding-right: 4rem;
+        }
     }
 
     &__contact-info {
@@ -294,17 +343,38 @@
             display: flex;
             justify-content: space-between;
             padding: 0 2rem;
-            
+        }
+
+        @include desktop {
+            display: flex;
+            justify-content: space-evenly;
+            padding-right: 20.5rem;
+            padding-left: 5.5rem;
+        }
+    }
+
+    &__info {
+        line-height: 1.125rem;
+        @include text-regular(0.813rem);
+
+        @include tablet {
+            line-height: 1.25rem;
+            @include text-regular(0.875rem);
         }
     }
 
     &__name {
         margin: 0;
+        @include text-bold(0.813rem);
+
+        @include tablet {
+            @include text-bold(0.875rem);
+        }
 
     }
     &__details {
         margin-top: 0;
-        line-height: 1.125rem;
+        font-weight: 600;
     }
 
     &__logo-container {
@@ -332,8 +402,11 @@
             margin-bottom: 3%;
             padding-left: 1.1rem;
             line-height: 1.375rem;
-            @include text-regular(0.875rem)
-            
+            @include text-regular(0.875rem)  
+        }
+
+        @include desktop {
+            padding-left: 9.3rem;
         }
         
     }
