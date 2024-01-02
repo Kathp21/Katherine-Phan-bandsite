@@ -2,13 +2,13 @@
 @use './partials/mixins' as *;
 @use './partials/global' as *;
 
-
+//Header section
 .header {
     background-color: $bandsite-black;
     padding: 0 1rem;
     
     @include tablet {
-    padding: 0 1rem;
+    padding: 1rem 1rem 0 1rem;
     }
 
     @include desktop {
@@ -25,7 +25,6 @@
             flex-direction: row;
             align-items: center;
             gap: 5rem;
-
         }
     }
 
@@ -52,12 +51,9 @@
         
         @include tablet {
             gap: 3rem;
-            // margin-bottom: 0;
-            // margin-top: 20%;
             }
     }
 
-    
     &__nav-link {
         color: $white;
         text-decoration: none;
@@ -76,20 +72,10 @@
             
             @include tablet {
                 padding-bottom: 30%;
-                }
-
+            }
         }
     }
 }
-
-// //Tablet
-// @media (min-width: 48rem) {
-//     .header__nav-container {
-//         display: flex;
-//         flex-direction: row;
-//         align-items: stretch;
-//     }
-// }
 
 //hero section
 .hero {
@@ -124,38 +110,41 @@
 }
 
 //Main Section 
-.main-title {
-    padding: 1.5rem 0 1rem 1rem;
-    margin: 0;
-    line-height: 44px;
-    @include text-bold(1.5rem);
+.musicians {
+    
+    &__title {
+        padding: 1.5rem 0 1rem 1rem;
+        margin: 0;
+        line-height: 44px;
+        @include text-bold(1.5rem);
 
+        @include tablet {
+            padding: 3rem 3rem 0 1.5rem;
+            @include text-bold(2.5rem);
+        }
 
-    @include tablet {
-        padding: 3rem 3rem 0 1.5rem;
-        @include text-bold(2.5rem);
+        @include desktop {
+            padding-left: 12%;
+        }
     }
 
-    @include desktop {
-        padding-left: 12%;
-    }
-}
-.main-image {
-    width: 100%;
-    height: 30vh; 
-    object-fit: cover; 
-    margin: 0 auto;
-    padding: 0 1rem;
+    &__image {
+        width: 100%;
+        height: 30vh; 
+        object-fit: cover; 
+        margin: 0 auto;
+        padding: 0 1rem;
 
-    @include tablet {
-        height: 80vh;
-        padding: 2rem 4rem 4rem 4rem;
-    }
+        @include tablet {
+            height: 50vh;
+            padding: 2rem 4rem 2.5rem 4rem;
+        }
 
-    @include desktop {
-        height: 54vh;
-        width: 100vw;
-        padding: 3% 20% 3% 20%;
+        @include desktop {
+            height: 58vh;
+            width: 100vw;
+            padding: 3% 20% 3% 20%;
+        }
     }
 }
 
@@ -163,7 +152,6 @@
     @include text-bold(0.9rem);
     line-height: 1.375rem;
     padding: 1rem 1rem 0 1rem;
-
 
     @include tablet {
         padding: 0 4rem;
@@ -238,13 +226,13 @@
 
         @include tablet {
             padding-left: 1.5rem;
-            padding-top: 6%;
+            padding-top: 5%;
             line-height: 2rem;
             @include text-bold(2.25rem);
         }
 
         @include desktop {
-            padding-left: 12%;
+            padding-left: 11.5%;
         }
     }
 
@@ -258,7 +246,7 @@
         }
         
         @include desktop {     
-            padding: 0 4% 2% 8%;
+            padding: 0 4% 1% 10%;
         }
     }
 
@@ -269,28 +257,42 @@
         padding-bottom: 1rem;
 
         @include tablet {
-            height: 24vh;
+            height: 20vh;
             width: 31vw;
             padding-right: 0;
+            padding-bottom: 1.3rem;
         }
 
         @include desktop {
             height: 27vh;
             width: 26vw;
-            padding-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            padding-left: 0;
         }
     }
 }
 
+//Footer
 .footer {
     background-color: $bandsite-black;
+    display: flex;
+    flex-direction: column;
 
     &__container {
         @include tablet {
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        align-items: baseline;
+        justify-content: space-between;
         padding-top: 3%;
+        padding-left: 4.2%;
+        }
+
+        @include desktop {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+        padding-top: 3%;
+        padding-left: 12%;
         }
     }
 
@@ -307,22 +309,29 @@
         }
 
         @include desktop {
-            padding-left: 9%;
+            padding-left: 0;
         }
     }
 
     &__social-icon {
         display: flex;
-        padding-right: 85%;
+        justify-content: flex-start;
+        padding-right: 70%;
 
         @include tablet {
-            padding-right: 39%;
-            justify-content: space-evenly;
+            padding-right: 35%;
+            // padding-left: 4%;
+            // justify-content: space-evenly;
+        }
+
+        @include desktop {
+            padding-right: 49%;
+            padding-left: 9.2%;
         }
     }
 
     &__icon {
-        margin-left: 26%;
+        padding-left: 16%;
         padding-right: 10%;
     }
 
@@ -332,10 +341,11 @@
         }
         @include tablet {
             opacity: 1;
+            margin-right: 2.125rem;
         }
 
         @include desktop {
-            padding-right: 4rem;
+            padding-left: 5%;
         }
     }
 
@@ -345,15 +355,14 @@
 
         @include tablet {
             display: flex;
-            justify-content: space-between;
-            padding: 0 2rem;
+            justify-content: flex-start;
+            padding-left: 4.2%;
         }
 
         @include desktop {
             display: flex;
-            justify-content: space-evenly;
-            padding-right: 20.5rem;
-            padding-left: 5.5rem;
+            justify-content: flex-start;
+            padding-left: 12%;
         }
     }
 
@@ -364,6 +373,7 @@
         @include tablet {
             line-height: 1.25rem;
             @include text-regular(0.875rem);
+            padding-right: 10%;
         }
     }
 
@@ -403,16 +413,16 @@
         line-height: 1.125rem;
 
         @include tablet {
+            margin-top: 0;
             margin-bottom: 3%;
-            padding-left: 1.1rem;
+            padding-left: 3.3%;
             line-height: 1.375rem;
             @include text-regular(0.875rem)  
         }
 
         @include desktop {
-            padding-left: 9.3rem;
+            padding-left: 11%;
         }
         
     }
 }
-

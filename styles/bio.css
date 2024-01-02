@@ -26,7 +26,7 @@ body {
 }
 @media screen and (min-width: 48rem) {
   .header {
-    padding: 0 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -130,7 +130,7 @@ body {
   }
 }
 
-.main-title {
+.musicians__title {
   padding: 1.5rem 0 1rem 1rem;
   margin: 0;
   line-height: 44px;
@@ -138,19 +138,18 @@ body {
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
-  .main-title {
+  .musicians__title {
     padding: 3rem 3rem 0 1.5rem;
     font-size: 2.5rem;
     font-weight: 600;
   }
 }
 @media screen and (min-width: 80rem) {
-  .main-title {
+  .musicians__title {
     padding-left: 12%;
   }
 }
-
-.main-image {
+.musicians__image {
   width: 100%;
   height: 30vh;
   -o-object-fit: cover;
@@ -159,14 +158,14 @@ body {
   padding: 0 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .main-image {
-    height: 80vh;
-    padding: 2rem 4rem 4rem 4rem;
+  .musicians__image {
+    height: 50vh;
+    padding: 2rem 4rem 2.5rem 4rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .main-image {
-    height: 54vh;
+  .musicians__image {
+    height: 58vh;
     width: 100vw;
     padding: 3% 20% 3% 20%;
   }
@@ -259,7 +258,7 @@ body {
 @media screen and (min-width: 48rem) {
   .gallery__title {
     padding-left: 1.5rem;
-    padding-top: 6%;
+    padding-top: 5%;
     line-height: 2rem;
     font-size: 2.25rem;
     font-weight: 600;
@@ -267,7 +266,7 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .gallery__title {
-    padding-left: 12%;
+    padding-left: 11.5%;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -281,7 +280,7 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .gallery__list {
-    padding: 0 4% 2% 8%;
+    padding: 0 4% 1% 10%;
   }
 }
 .gallery__items {
@@ -292,28 +291,42 @@ body {
 }
 @media screen and (min-width: 48rem) {
   .gallery__items {
-    height: 24vh;
+    height: 20vh;
     width: 31vw;
     padding-right: 0;
+    padding-bottom: 1.3rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .gallery__items {
     height: 27vh;
     width: 26vw;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
   }
 }
 
 .footer {
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
   .footer__container {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: baseline;
+    justify-content: space-between;
     padding-top: 3%;
+    padding-left: 4.2%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding-top: 3%;
+    padding-left: 12%;
   }
 }
 .footer__title {
@@ -333,21 +346,27 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .footer__title {
-    padding-left: 9%;
+    padding-left: 0;
   }
 }
 .footer__social-icon {
   display: flex;
-  padding-right: 85%;
+  justify-content: flex-start;
+  padding-right: 70%;
 }
 @media screen and (min-width: 48rem) {
   .footer__social-icon {
-    padding-right: 39%;
-    justify-content: space-evenly;
+    padding-right: 35%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__social-icon {
+    padding-right: 49%;
+    padding-left: 9.2%;
   }
 }
 .footer__icon {
-  margin-left: 26%;
+  padding-left: 16%;
   padding-right: 10%;
 }
 @media screen and (min-width: 20rem) {
@@ -358,11 +377,12 @@ body {
 @media screen and (min-width: 48rem) {
   .footer__logo {
     opacity: 1;
+    margin-right: 2.125rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .footer__logo {
-    padding-right: 4rem;
+    padding-left: 5%;
   }
 }
 .footer__contact-info {
@@ -372,16 +392,15 @@ body {
 @media screen and (min-width: 48rem) {
   .footer__contact-info {
     display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
+    justify-content: flex-start;
+    padding-left: 4.2%;
   }
 }
 @media screen and (min-width: 80rem) {
   .footer__contact-info {
     display: flex;
-    justify-content: space-evenly;
-    padding-right: 20.5rem;
-    padding-left: 5.5rem;
+    justify-content: flex-start;
+    padding-left: 12%;
   }
 }
 .footer__info {
@@ -394,6 +413,7 @@ body {
     line-height: 1.25rem;
     font-size: 0.875rem;
     font-weight: 400;
+    padding-right: 10%;
   }
 }
 .footer__name {
@@ -434,8 +454,9 @@ body {
 }
 @media screen and (min-width: 48rem) {
   .footer__copyright {
+    margin-top: 0;
     margin-bottom: 3%;
-    padding-left: 1.1rem;
+    padding-left: 3.3%;
     line-height: 1.375rem;
     font-size: 0.875rem;
     font-weight: 400;
@@ -443,6 +464,6 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .footer__copyright {
-    padding-left: 9.3rem;
+    padding-left: 11%;
   }
 }/*# sourceMappingURL=bio.css.map */
