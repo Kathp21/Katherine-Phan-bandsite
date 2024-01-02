@@ -2,6 +2,82 @@
 @use './mixins' as *;
 @use './global' as *;
 
+// Header section
+.header {
+    background-color: $bandsite-black;
+    padding: 0 1rem;
+    
+    @include tablet {
+    padding: 1rem 1rem 0 1rem;
+    }
+
+    @include desktop {
+        padding-left: 10%;
+    }
+
+    &__nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            gap: 5rem;
+        }
+    }
+
+    &__nav-logo {
+        height: 3vh;
+        margin-top: 5%;
+
+        @include tablet {
+            margin-top: 0;
+            margin-left: 2%;
+        }
+    }
+
+    &__title {
+        color: $color-white;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        
+        @include tablet {
+            gap: 3rem;
+            }
+    }
+
+    &__nav-link {
+        color: $color-white;
+        text-decoration: none;
+        display: inline-block;
+        width: 50vw;
+        text-align: center;
+
+        @include tablet {
+            width: fit-content;
+        }
+        
+        &--active {
+            border-bottom:  2px solid $color-white;
+            padding-bottom: 10%;
+            font-weight: 600;
+            
+            @include tablet {
+                padding-bottom: 30%;
+            }
+        }
+    }
+}
+
+//Footer Section
 .footer {
     background-color: $bandsite-black;
     display: flex;
