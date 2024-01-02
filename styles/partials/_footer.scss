@@ -1,0 +1,153 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './global' as *;
+
+.footer {
+    background-color: $bandsite-black;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        @include tablet {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-left: 4.2%;
+        }
+
+        @include desktop {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+        padding-top: 3%;
+        padding-left: 12%;
+        }
+    }
+
+    &__title {
+        color: $color-white;
+        padding: 1.5rem 0 0 1rem;
+        margin-bottom: 1.5rem;
+        margin-top: 0;
+        @include text-bold(1.5rem);
+
+        @include tablet {
+            padding-left: 0;
+            @include text-bold(2.25rem)
+        }
+
+        @include desktop {
+            padding-left: 0;
+        }
+    }
+
+    &__social-icon {
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 60%;
+
+        @include tablet {
+            padding-right: 40%;
+        }
+
+        @include desktop {
+            padding-right: 49%;
+            padding-left: 8.2%;
+        }
+    }
+
+    &__icon {
+            padding-left: 16%;
+            padding-right: 10%;
+    }
+
+    &__logo {
+        @include mobile {
+            opacity: 0;
+        }
+        @include tablet {
+            opacity: 1;
+            margin-right: 2.125rem;
+        }
+
+        @include desktop {
+            padding-left: 5%;
+        }
+    }
+
+    &__contact-info {
+        color: $color-white;
+        padding: 0 1rem 1rem 1rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 4.2%;
+        }
+
+        @include desktop {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 12%;
+        }
+    }
+
+    &__info {
+        line-height: 1.125rem;
+        @include text-regular(0.813rem);
+
+        @include tablet {
+            line-height: 1.25rem;
+            @include text-regular(0.875rem);
+            padding-right: 10%;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        @include text-bold(0.813rem);
+
+        @include tablet {
+            @include text-bold(0.875rem);
+        }
+    }
+    &__details {
+        margin-top: 0;
+        font-weight: 600;
+    }
+
+    &__logo-container {
+        color: $color-white;
+        padding: 1rem;
+    }
+   
+    &__logo-name {
+        font-weight: 400;
+
+        @include tablet {
+        opacity: 0;
+        margin: 0;
+        font-size: 0;
+        }
+    }
+
+    &__copyright {
+        color: $color-white;
+        margin-bottom: 0;
+        @include text-regular(0.813rem);
+        line-height: 1.125rem;
+
+        @include tablet {
+            margin-top: 0;
+            margin-bottom: 3%;
+            padding-left: 3.3%;
+            line-height: 1.375rem;
+            @include text-regular(0.875rem)  
+        }
+
+        @include desktop {
+            padding-left: 11%;
+        }
+    }
+}
