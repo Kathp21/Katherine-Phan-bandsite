@@ -142,22 +142,20 @@ body {
 .footer__social-icon {
   display: flex;
   justify-content: flex-start;
-  padding-right: 60%;
 }
 @media screen and (min-width: 48rem) {
   .footer__social-icon {
-    padding-right: 40%;
+    padding-right: 30%;
   }
 }
 @media screen and (min-width: 80rem) {
   .footer__social-icon {
-    padding-right: 49%;
-    padding-left: 8.2%;
+    padding-right: 40%;
+    padding-left: 7.2%;
   }
 }
 .footer__icon {
-  padding-left: 16%;
-  padding-right: 10%;
+  padding: 0 1rem;
 }
 @media screen and (min-width: 20rem) {
   .footer__logo {
@@ -260,7 +258,7 @@ body {
 
 .hero {
   position: relative;
-  height: 35vh;
+  height: 40vh;
   background-image: url(../assets/images/hero-bio.jpg), linear-gradient(rgba(50, 50, 50, 0.6), rgba(50, 50, 50, 0.6));
   background-size: cover;
   background-position: center;
@@ -471,4 +469,41 @@ body {
     padding-bottom: 2rem;
     padding-left: 0;
   }
+}
+
+.comment__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1.5rem 0;
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.comment__name-input {
+  padding: 1rem;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+.comment__input {
+  padding: 2rem;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+.comment__name {
+  padding: 0.3rem;
+}
+.comment__button {
+  display: flex;
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 0;
+  padding: 0.7rem 2.5rem;
+}
+.comment__btn-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1.5rem;
 }/*# sourceMappingURL=bio.css.map */

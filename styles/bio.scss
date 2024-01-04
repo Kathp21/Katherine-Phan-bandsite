@@ -1,7 +1,7 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 @use './partials/global' as *;
-@use './partials/main' as *;
+@use './partials/header' as *;
 @use './partials/footer' as*;
 
 //Hero Section
@@ -146,7 +146,7 @@
 }
 
 .gallery {
-    background-color: #fafafa;
+    background-color: $color-alabaster;
 
     &__title {
         margin-top: 0;
@@ -202,4 +202,46 @@
     }
 }
 
+//Comment form
+.comment {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding:0 0 1.5rem 0;
+        color: $color-silver;
+        @include text-demi(0.875rem);
+    }
+
+    &__name-input{
+        padding: 1rem;
+        @include form-style;
+    }
+
+    &__input {
+        padding: 2rem;
+        @include form-style;
+
+    }
+
+    &__name {
+        padding: 0.3rem;
+    }
+
+    &__button {
+        display: flex;
+        background-color: $bandsite-black;
+        color: $color-white;
+        border-radius: 4px;
+        border: 0;
+        padding: 0.7rem 2.5rem;
+
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 1.5rem;
+    }
+}
 

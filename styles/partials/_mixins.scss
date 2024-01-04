@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables' as *;
 
 @mixin mobile {
     @media screen and (min-width: 20rem) {
@@ -31,4 +31,10 @@
 @mixin text-bold($font-size) {
   font-size: $font-size;
   font-weight: 600;
+}
+
+@mixin form-style {
+  background-color: $color-alabaster;
+  border: 1px solid $color-mercury;
+  border-radius: 4px;
 }
