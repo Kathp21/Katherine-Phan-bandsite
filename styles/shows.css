@@ -20,82 +20,6 @@ body {
   font-family: "Avenir", sans-serif;
 }
 
-.header {
-  background-color: #323232;
-  padding: 0 1rem;
-}
-@media screen and (min-width: 48rem) {
-  .header {
-    padding: 1rem 1rem 0 1rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .header {
-    padding-left: 10%;
-  }
-}
-.header__nav-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media screen and (min-width: 48rem) {
-  .header__nav-container {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 5rem;
-  }
-}
-.header__nav-logo {
-  height: 3vh;
-  margin-top: 5%;
-}
-@media screen and (min-width: 48rem) {
-  .header__nav-logo {
-    margin-top: 0;
-    margin-left: 2%;
-  }
-}
-.header__title {
-  color: #ffffff;
-}
-.header__nav-list {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-@media screen and (min-width: 48rem) {
-  .header__nav-list {
-    gap: 3rem;
-  }
-}
-.header__nav-link {
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
-  width: 50vw;
-  text-align: center;
-}
-@media screen and (min-width: 48rem) {
-  .header__nav-link {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-.header__nav-link--active {
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 10%;
-  font-weight: 600;
-}
-@media screen and (min-width: 48rem) {
-  .header__nav-link--active {
-    padding-bottom: 30%;
-  }
-}
-
 .footer {
   background-color: #323232;
   display: flex;
@@ -142,22 +66,20 @@ body {
 .footer__social-icon {
   display: flex;
   justify-content: flex-start;
-  padding-right: 60%;
 }
 @media screen and (min-width: 48rem) {
   .footer__social-icon {
-    padding-right: 40%;
+    padding-right: 30%;
   }
 }
 @media screen and (min-width: 80rem) {
   .footer__social-icon {
-    padding-right: 49%;
-    padding-left: 8.2%;
+    padding-right: 40%;
+    padding-left: 7.2%;
   }
 }
 .footer__icon {
-  padding-left: 16%;
-  padding-right: 10%;
+  padding: 0 1rem;
 }
 @media screen and (min-width: 20rem) {
   .footer__logo {
@@ -364,4 +286,29 @@ body {
   margin: 0;
   width: 70%;
   padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.shows__underline {
+  border-bottom: 2px solid #AFAFAF;
+  padding: 0 1rem;
+}
+.shows__details {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.shows__btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.shows__btn {
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 100%;
+  height: 8vh;
+  border: 0;
 }/*# sourceMappingURL=shows.css.map */
