@@ -205,6 +205,15 @@
 //Comment form
 .comment {
 
+    &__area {
+        display: flex;
+    }
+
+    &__profile {
+        height: 10vh;
+        
+    }
+
     &__container {
         display: flex;
         flex-direction: column;

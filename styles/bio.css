@@ -471,6 +471,12 @@ body {
   }
 }
 
+.comment__area {
+  display: flex;
+}
+.comment__profile {
+  height: 10vh;
+}
 .comment__container {
   display: flex;
   flex-direction: column;
