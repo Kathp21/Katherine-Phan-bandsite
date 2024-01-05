@@ -482,7 +482,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 0.7rem;
+  margin: 10% 3% 0 0;
 }
 .comment__container {
   display: flex;
@@ -490,6 +490,7 @@ body {
 }
 .comment__name {
   padding: 0.3rem;
+  color: #AFAFAF;
 }
 .comment__btn-container {
   display: flex;
@@ -501,6 +502,16 @@ body {
   padding: 0.7rem 0;
   width: 67vw;
   margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.comment__list {
+  list-style: none;
+  padding-left: 1rem;
+}
+.comment__list-column {
+  display: flex;
+  flex-direction: column;
 }
 
 #userName {
