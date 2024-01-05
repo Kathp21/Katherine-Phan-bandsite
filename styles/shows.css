@@ -24,6 +24,7 @@ body {
   background-color: #323232;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .footer__container {
@@ -258,7 +259,7 @@ body {
 
 .hero-shows {
   position: relative;
-  height: 40vh;
+  height: 50vh;
   background-image: url(../assets/Images/hero-shows.jpg), linear-gradient(rgba(50, 50, 50, 0.6), rgba(50, 50, 50, 0.6));
   background-size: cover;
   background-position: center;
@@ -289,26 +290,55 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
 }
-
-.shows__underline {
-  border-bottom: 2px solid #AFAFAF;
-  padding: 0 1rem;
+.hero-shows__soundcloud {
+  position: absolute;
+  width: 90vw;
+  height: 18vh;
+  margin-top: 44%;
+  padding-left: 1rem;
 }
+@media screen and (min-width: 48rem) {
+  .hero-shows__soundcloud {
+    width: 60vw;
+    height: 25vh;
+    margin-top: 16%;
+  }
+}
+
+.body-title {
+  padding: 1rem 0 0 1rem;
+  margin-bottom: 0;
+}
+
 .shows__details {
   color: #AFAFAF;
+  padding: 1rem;
   font-size: 0.875rem;
   font-weight: 500;
+}
+.shows__info {
+  color: #323232;
+}
+.shows__info--bold {
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 .shows__btn-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.2rem;
 }
-.shows__btn {
+.shows__button {
+  display: flex;
+  justify-content: center;
   background-color: #323232;
   color: #ffffff;
   border-radius: 4px;
-  width: 100%;
-  height: 8vh;
   border: 0;
+  padding: 0.7rem 0;
+  margin-bottom: 1rem;
+  width: 90%;
+}
+.shows__divider {
+  padding: 0 1rem;
+  border-bottom: 1px solid #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */

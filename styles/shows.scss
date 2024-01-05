@@ -5,8 +5,9 @@
 @use './partials/header' as *;
 
 .hero-shows {
+
     position: relative;
-    height: 40vh;
+    height: 50vh;
     background-image: url(../assets/Images/hero-shows.jpg), linear-gradient(rgba(50,50,50,60%), rgba(50,50,50,60%));
     background-size: cover;
     background-position: center;
@@ -35,34 +36,66 @@
         padding-left: 1rem;
         @include text-bold(1.5rem);
     }
+
+    &__soundcloud {
+        position: absolute;
+        width: 90vw;
+        height: 18vh;
+        margin-top: 44%;
+        padding-left: 1rem;
+
+        @include tablet {
+            width: 60vw;
+            height: 25vh;
+            margin-top: 16%;
+            
+
+        }
+    }
+}
+
+.body-title {
+    padding: 1rem 0 0 1rem;
+    margin-bottom: 0;
 }
 
 .shows {
 
-    &__underline {
-        border-bottom: 2px solid $color-silver;
-        padding: 0 1rem; 
-    }
-
     &__details {
         color:$color-silver;
+        padding: 1rem;
         @include text-demi (0.875rem);
     }
 
+    &__info {
+        color: $bandsite-black;
+
+        &--bold {
+            @include text-bold(0.875rem);
+        }
+    }
     &__btn-container {
         display: flex;
         justify-content: center;
-        margin-bottom: 1.2rem;
+        // margin-bottom: 1.2rem;
 
     }
 
-    &__btn {
-        background-color: $bandsite-black;
-        color: $color-white;
-        border-radius: 4px;
-        width: 100%;
-        height: 8vh;
-        border: 0;
+    &__button {
+        // background-color: $bandsite-black;
+        // color: $color-white;
+        // border-radius: 4px;
+        // width: 100%;
+        // height: 8vh;
+        // border: 0;
+        @include submit-btn;
+        width: 90%;
 
+    }
+
+    &__divider {
+        // border-bottom: 2px solid $color-silver;
+        padding: 0 1rem; 
+        border-bottom: $line-divider;
     }
 }
