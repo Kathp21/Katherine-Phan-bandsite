@@ -18,6 +18,7 @@
 
 body {
   font-family: "Avenir", sans-serif;
+  margin: 0;
 }
 
 .footer {
@@ -291,7 +292,6 @@ body {
   font-weight: 600;
 }
 .hero-shows__soundcloud {
-  position: absolute;
   width: 90vw;
   height: 18vh;
   margin-top: 44%;

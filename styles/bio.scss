@@ -277,3 +277,15 @@
     @include form-style;
     margin-bottom: 1.2rem;
 }
+
+.comment-container {
+    display: flex;
+
+    &__img {
+        height: 5vh;
+    }
+
+    &__info {
+        display: flex;
+    }
+}

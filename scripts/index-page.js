@@ -27,40 +27,84 @@ const previousComment = [
 
 const commentList = document.getElementById('commentList')
 
+// const addCommentToPage = (comment) => {
+//     const commentEl = document.createElement('div')
+//     commentEl.classList.add('comment__list-column')
+
+//     const imageEl = document.createElement('p')
+//     const nameEl = document.createElement('p')
+//     const contentEl = document.createElement('p')
+//     const dateEl = document.createElement('p')
+
+//     imageEl.classList.add('comment__data')
+//     nameEl.classList.add('comment__data')
+//     contentEl.classList.add('comment__data')
+//     dateEl.classList.add('comment__data')
+
+//     imageEl.setAttribute('src',comment.image)
+//     nameEl.innerText = comment.userName
+//     contentEl.innerText = comment.content
+//     dateEl.innerText = comment.date
+
+//     commentEl.appendChild(imageEl)
+//     commentEl.appendChild(dateEl)
+//     commentEl.appendChild(nameEl)
+//     commentEl.appendChild(contentEl)
+    
+//      commentList.appendChild(commentEl)
+
+//      const commentList = document.getElementById('commentList')
+
+const commentContainer = document.querySelector('.comment-container')
+
 const addCommentToPage = (comment) => {
-    const commentEl = document.createElement('li')
-    commentEl.classList.add('comment__list-column')
+    const profileImg = document.createElement('img')
+    profileImg.classList.add('comment-container__img')
+    commentContainer.appendChild(profileImg)
 
-    const imageEl = document.createElement('span')
-    const nameEl = document.createElement('span')
-    const contentEl = document.createElement('span')
-    const dateEl = document.createElement('span')
+    //creat div for comment-container__info
+    const containerInfo = document.createElement('div')
+    containerInfo.classList.add('comment-container__info')
+    commentContainer.appendChild(containerInfo)
 
-    imageEl.classList.add('comment__data')
-    nameEl.classList.add('comment__data')
-    contentEl.classList.add('comment__data')
-    dateEl.classList.add('comment__data')
+    //create <p> tag for Name and Date
+    const comName = document.createElement('p')
+    comName.classList.add('comment-container__name')
+    const comDate = document.createElement('p')
+    comDate.classList.add('comment-container__date')
 
-    imageEl.innerText = comment.image
+    containerInfo.appendChild(comName)
+    containerInfo.appendChild(comDate)
+
+    //create <p> tag and add to <div> comment-container__info
+    const comContent = document.createElement('p')
+    comContent.classList.add('.comment-container__content')
+    commentContainer.appendChild(comContent)
+
+    commentContainer.appendChild(containerInfo)
+    
+
+    imageEl.setAttribute('src',comment.image)
     nameEl.innerText = comment.userName
     contentEl.innerText = comment.content
     dateEl.innerText = comment.date
 
-    commentEl.appendChild(imageEl)
+    
     commentEl.appendChild(dateEl)
     commentEl.appendChild(nameEl)
     commentEl.appendChild(contentEl)
     
-    // const commentUserDetails = document.createElement('div')
-    // commentUserDetails.classList.add('comment__user-info')
+     commentList.appendChild(commentEl)
 
-    // commentUserDetails.appendChild(imageEl)
-    // commentUserDetails.appendChild(nameEl)
-    // commentUserDetails.appendChild(dateEl)
+     const commentName = document.querySelector('.comment-container__name')
+     commentName.innerText = comment.userName
 
-    // commentList.appendChild(commentUserDetails)
-    
-    commentList.appendChild(commentEl)
+     const commentDate = document.querySelector('.comment-container__date')
+     commentDate.innerText = comment.date
+
+     const commentContent = document.querySelector('.comment-container__content')
+     commentContent.innerText = comment.content
+
 }
 
 
