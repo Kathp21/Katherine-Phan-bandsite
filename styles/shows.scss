@@ -14,7 +14,7 @@
     background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 
     @include tablet {
         height: 60vh;
@@ -33,16 +33,15 @@
         color: $color-white;
         margin: 0;
         width: 70%;
-        padding-left: 1rem;
+        padding: $lf-rt-mobile;
         @include text-bold(1.5rem);
     }
 
     &__soundcloud {
-        // position: absolute;
-        width: 90vw;
-        height: 18vh;
-        margin-top: 44%;
-        padding-left: 1rem;
+        width: 100vw;
+        // height: 18vh;
+        margin-top: 10%;
+        padding: $lf-rt-mobile;
 
         @include tablet {
             width: 60vw;

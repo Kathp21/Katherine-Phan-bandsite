@@ -208,10 +208,6 @@
 .comment {
     padding: $lf-rt-mobile;
 
-    // &__title {
-        
-    // }
-
     &__area {
         display: flex;
         border-bottom: $line-divider;
@@ -236,25 +232,27 @@
 
     &__btn-container {
         @include submit-btn;
-        width: 67vw;
+        width: 74vw;
         @include text-demi(0.875rem);
+        
+        &--click {
+            background-color: $bandsite-darkblack;
+        }
     }
 
-    &__list {
-        list-style: none;
-        padding-left: 1rem;
+    &__active-state {
+        border: 1px solid $bandsite-black;
     }
 
-    &__list-column {
-        display: flex;
-        flex-direction: column;
-
+    &__error {
+        color: $color-for-error;
     }
 }
 
 #userName {
     @include text-demi(0.875rem);
-    padding: 1rem;
+    padding: 0.75rem;
+    height: 2.25rem;
     @include form-style;
     margin-bottom: 1.2rem;
 }
@@ -270,16 +268,20 @@
     padding: $lf-rt-mobile;
 
     &__divider {
-    display: flex;
-    border-bottom: $line-divider;
+        display: flex;
+        border-bottom: $line-divider;
+    }
+
+    &__header {
+        flex: 1;
     }
 
     &__img {
         width: 2.25rem;
         height: 2.25rem;
         background-color: $color-mercury;
-        border-radius: 50%; /* this creates the circular shape */
-        border: 1px solid $color-mercury; /* border around the circle */
+        border-radius: 50%; 
+        border: 1px solid $color-mercury; 
         flex-shrink: 0;
         flex-grow: 0;
         flex-basis: auto;
@@ -290,10 +292,6 @@
     &__info {
         display: flex;
         justify-content: space-between;
-    }
-
-    &__name {
-        // margin-top: $margin-zero;
     }
 
     &__content {
