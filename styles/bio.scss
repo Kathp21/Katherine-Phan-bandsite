@@ -245,7 +245,8 @@
     }
 
     &__error {
-        color: $color-for-error;
+        border: 1px solid;
+        border-color: #FFA500; // This is the hex code for orange, for example.
     }
 }
 
@@ -255,6 +256,19 @@
     height: 2.25rem;
     @include form-style;
     margin-bottom: 1.2rem;
+
+    &.error {
+        border-color: $color-for-error;
+    }
+
+    &.active {
+        border-color: $bandsite-black;
+    }
+}
+
+#userName:focus {
+    outline: none;
+    border: 1px solid $bandsite-black;
 }
 
 #addComment {

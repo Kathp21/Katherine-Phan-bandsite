@@ -510,7 +510,8 @@ body {
   border: 1px solid #323232;
 }
 .comment__error {
-  color: #D22D2D;
+  border: 1px solid;
+  border-color: #FFA500;
 }
 
 #userName {
@@ -522,6 +523,17 @@ body {
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   margin-bottom: 1.2rem;
+}
+#userName.error {
+  border-color: #D22D2D;
+}
+#userName.active {
+  border-color: #323232;
+}
+
+#userName:focus {
+  outline: none;
+  border: 1px solid #323232;
 }
 
 #addComment {

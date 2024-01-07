@@ -118,21 +118,38 @@ clickButton.addEventListener('click', (event) => {
 const formActive = document.getElementById('userName')
 
 function addActiveBorder() {
-    formActive.classList.toggle('comment__active-state')
+    const inputEl = document.getElementById('userName')
+    const inputValue = inputEl.value
+
+    if (inputValue.trim() === '') {
+        formActive.classList.add('error')
+        formActive.classList.remove('active')
+    } else {
+        formActive.classList.remove('error')
+    }
 }
 formActive.addEventListener('input', addActiveBorder)
 
+function onInputFocus() {
+    formActive.classList.add('active')
+}
+
+function onBlur() {
+    formActive.classList.remove('active')
+}
+formActive.addEventListener('focus', onInputFocus)
+formActive.addEventListener('blur', onBlur)
 
 //Validate form
 function validateForm() {
     const inputEl = document.getElementById('userName')
     const inputValue = inputEl.value
 
-    if (inputValue.trim() === '') {
-        inputEl.classList.add('comment__error')
-        return false
-    } else {
-        inputEl.classList.remove('comment__error')
-        return true
-    }
+
+    // inputEl.classList.add('comment__error')
+    // if (inputValue.trim() === '') {
+    //     inputEl.classList.add('comment__error')
+    // } else {
+    //     inputEl.classList.remove('comment__error')
+    // }
 }

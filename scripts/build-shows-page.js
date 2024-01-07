@@ -18,12 +18,17 @@ const shows = [
 const gateway = document.querySelector(".shows");
 
 const addToShows = (show) => {
-    const showEl = document.createElement('div')
-    showEl.classList.add('shows__details')
+    const showSection = document.createElement('div')
+    showSection.classList.add('shows__section')
+    gateway.appendChild(showSection)
 
     const showDate = document.createElement('p')
     const showVenue = document.createElement('p')
     const showLocation = document.createElement('p')
+    showDate.classList.add('shows__data')
+    showVenue.classList.add('shows__data')
+    showLocation.classList.add('shows__data')
+
     const showDateEl = document.createElement('p')
     const showVenueEl = document.createElement('p')
     const showLocationEl = document.createElement('p')
@@ -40,18 +45,40 @@ const addToShows = (show) => {
     showVenueEl.innerText = show.venue
     showLocationEl.innerText = show.location
 
-    showEl.appendChild(showDate)
-    showEl.appendChild(showDateEl)
-    showEl.appendChild(showVenue)
-    showEl.appendChild(showVenueEl)
-    showEl.appendChild(showLocation)
-    showEl.appendChild(showLocationEl)
+    showSection.appendChild(showDate)
+    showSection.appendChild(showDateEl)
 
-    gateway.appendChild(showEl)
+    showSection.appendChild(showVenue)
+    showSection.appendChild(showVenueEl)
 
-//Button
+    showSection.appendChild(showLocation)
+    showSection.appendChild(showLocationEl)
+
+    gateway.appendChild(showSection)
+
+    // //tablet
+    // const showInfoTablet = document.createElement('div')
+    // showInfoTablet.classList.add('shows__info-container')
+    // gateway.appendChild(showInfoTablet)
+    
+    // showInfoTablet.appendChild(showDate)
+    // showInfoTablet.appendChild(showDateEl)
+    
+
+
+    showSection.addEventListener('click', (event) => {
+        const clickedShows = document.querySelectorAll('.shows__section--click')
+        clickedShows.forEach((show) => {
+            show.classList.remove('shows__section--click')
+        })
+
+        showSection.classList.add('shows__section--click')
+    })
+
+
+    //Button
     const btnContainer = document.createElement("div")
-    gateway.appendChild(btnContainer)
+    showSection.appendChild(btnContainer)
 
     const btn = document.createElement("button")
     btn.innerText = "BUY TICKETS"
@@ -59,12 +86,9 @@ const addToShows = (show) => {
         const clickButton = document.querySelector('.button')
         console.log("hello")
     })
-    gateway.appendChild(btn)
+    showSection.appendChild(btn)
 
     btnContainer.appendChild(btn)
-
-
-
 
 //Style button
     btn.classList.add("shows__button")
