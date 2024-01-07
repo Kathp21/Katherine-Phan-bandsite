@@ -79,7 +79,6 @@ const buildCommentList = (commentList) => {
 const addNewComment = document.querySelector('.comment__section')
 addNewComment.addEventListener('submit', (event) => {
     event.preventDefault()
-    console.log("hello")
 
     const currentDate = new Date()
     let day = currentDate.getDate()
@@ -115,41 +114,27 @@ clickButton.addEventListener('click', (event) => {
 })
 
 //Form active state
-const formActive = document.getElementById('userName')
+const nameInput = document.getElementById('userName')
 
-function addActiveBorder() {
-    const inputEl = document.getElementById('userName')
-    const inputValue = inputEl.value
+function updateBorderOnInput() {
+    const name = nameInput.value
 
-    if (inputValue.trim() === '') {
-        formActive.classList.add('error')
-        formActive.classList.remove('active')
+    if (name.trim() === '') {
+        nameInput.placeholder = ""
+        nameInput.classList.add('error')
+        nameInput.classList.remove('active')
     } else {
-        formActive.classList.remove('error')
+        nameInput.classList.remove('error')
     }
 }
-formActive.addEventListener('input', addActiveBorder)
+nameInput.addEventListener('input', updateBorderOnInput)
 
 function onInputFocus() {
-    formActive.classList.add('active')
+    nameInput.classList.add('active')
 }
 
 function onBlur() {
-    formActive.classList.remove('active')
+    nameInput.classList.remove('active')
 }
-formActive.addEventListener('focus', onInputFocus)
-formActive.addEventListener('blur', onBlur)
-
-//Validate form
-function validateForm() {
-    const inputEl = document.getElementById('userName')
-    const inputValue = inputEl.value
-
-
-    // inputEl.classList.add('comment__error')
-    // if (inputValue.trim() === '') {
-    //     inputEl.classList.add('comment__error')
-    // } else {
-    //     inputEl.classList.remove('comment__error')
-    // }
-}
+nameInput.addEventListener('focus', onInputFocus)
+nameInput.addEventListener('blur', onBlur)

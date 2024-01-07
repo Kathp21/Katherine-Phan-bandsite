@@ -15,9 +15,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: $lf-rt-mobile;
 
     @include tablet {
-        height: 60vh;
+        height: 80vh;
+        padding: $lf-rt-tablet;
     }
 
     @include desktop {
@@ -26,29 +28,27 @@
 
     &__text {
         color: $color-white;
-        padding-left: 1rem;
     }
 
     &__title {
         color: $color-white;
         margin: 0;
-        width: 70%;
-        padding: $lf-rt-mobile;
-        @include text-bold(1.5rem);
+        width: 75%;
+        @include text-bold($page-header-mob);
+
+        @include tablet {
+            font-size: $page-header;
+        }
     }
 
     &__soundcloud {
         width: 100vw;
-        // height: 18vh;
         margin-top: 10%;
-        padding: $lf-rt-mobile;
 
         @include tablet {
-            width: 60vw;
+            width: 52vw;
             height: 25vh;
-            margin-top: 16%;
-            
-
+            margin: $space-2r 0;
         }
     }
 }
@@ -56,23 +56,42 @@
 .body-title {
     padding: 1rem 0 0 1rem;
     margin-bottom: 0;
+    @include text-bold($page-header-mob);
+    color: $bandsite-black;
+
+    @include tablet {
+        padding: 1.5rem 2rem;
+        font-size: $section-header;
+    }
 }
 
 .shows {
+
+    &__info-container {
+        display: none;
+        
+        @include tablet {
+        display: flex;
+        justify-content: center;
+        margin-right: 11.93rem;
+        }
+    }
+
+    &__section {
+        padding: $lf-rt-mobile;
+    }
 
     &__details {
         opacity: 0;
        
         @include tablet {
-            padding-left: 5%;
+            padding-left: 2rem;
             flex: 0.23;
-            flex-shrink: 1;
+            flex-grow: 1;
             flex-basis: auto;
             color:$color-silver;
-            padding: 1rem;
-            @include text-demi (0.875rem);
+            @include text-bold ($sm-txt-tab);
             opacity: 1;
-            
         }
     }
 
@@ -82,6 +101,7 @@
         @include tablet {
             padding-right: 5%;
             padding-left: 3%;
+            flex-grow: 1;
         }
 
         &--bold {
@@ -90,39 +110,41 @@
     }
 
     &__data {
+        color: $color-silver;
+        @include text-bold($sm-txt-mob);
+
         @include tablet {
             opacity: 0;
             font-size: 0;
         }
     }
 
-    &__info-container {
-        display: none;
-        
-        @include tablet {
-        display: flex;
-        justify-content: center;
-        }
-    }
-
     &__btn-container {
         display: flex;
         justify-content: center;
-        padding-right: 2rem;
+
+        @include tablet {
+            padding: $lf-rt-tablet;
+        }
 
     }
 
     &__button {
         @include submit-btn;
-        width: 90%;
+        width: 100%;
+        height: $btn-height;
+        font-size: $btn-mob;
+        align-items: center;
+        @include text-bold($btn-mob);
+
+        &:hover {
+            background-color: $bandsite-darkblack;
+        }
 
         @include tablet {
             width: 9.375rem;
-            padding: 0 2rem;
-
-            
+            @include text-bold($btn-tab);
         }
-
     }
 
     &__divider {
@@ -135,10 +157,12 @@
             display: flex;
             align-items: baseline;
             justify-content: space-between;
+            padding-left: 0.8rem;
         }
-        // &:hover {
-        //     background-color: red;
-        // }
+
+        &:hover {
+            background-color: $color-alabaster;
+        }
 
         &--click {
             background-color: $color-mercury;
