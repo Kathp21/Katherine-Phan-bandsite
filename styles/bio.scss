@@ -206,14 +206,15 @@
 
 //Comment form
 .comment {
+    padding: $lf-rt-mobile;
 
-    &__title {
-        padding-left: 1rem;
-    }
+    // &__title {
+        
+    // }
 
     &__area {
         display: flex;
-        padding-left: 1rem;
+        border-bottom: $line-divider;
     }
 
     &__profile {
@@ -221,7 +222,6 @@
         height: 50px;
         border-radius: 50%;
         margin: 10% 3% 0 0;
-
     }
 
     &__container {
@@ -233,18 +233,6 @@
         padding: 0.3rem;
         color: $color-silver;
     }
-
-    // &__btn {
-    //     display: flex;
-    //     justify-content: center;
-    //     background-color: $bandsite-black;
-    //     color: $color-white;
-    //     border-radius: 4px;
-    //     border: 0;
-    //     padding: 0.7rem 0;
-    //     width: 67vw;
-    //     margin-bottom: 1rem;
-    // }
 
     &__btn-container {
         @include submit-btn;
@@ -279,13 +267,36 @@
 }
 
 .comment-container {
+    padding: $lf-rt-mobile;
+
+    &__divider {
     display: flex;
+    border-bottom: $line-divider;
+    }
 
     &__img {
-        height: 5vh;
+        width: 2.25rem;
+        height: 2.25rem;
+        background-color: $color-mercury;
+        border-radius: 50%; /* this creates the circular shape */
+        border: 1px solid $color-mercury; /* border around the circle */
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: auto;
+        margin-top: 1rem;
+        margin-right: 1rem;
     }
 
     &__info {
         display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        // margin-top: $margin-zero;
+    }
+
+    &__content {
+        margin-top: 0;
     }
 }

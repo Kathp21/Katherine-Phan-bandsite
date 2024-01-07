@@ -1,6 +1,6 @@
 const previousComment = [
     {
-        image : "image",
+        image : "https://placehold.co/400",
         userName : "Connor Walton",
         date : "02/17/2021",
         content: "This is art. This is inexplicable magic expressed in the purest way, \
@@ -8,14 +8,14 @@ const previousComment = [
         Let us appreciate this for what it is and what it contains."
     },
     {
-        image : "image",
+        image : "",
         userName : "Emilie Beach",
         date : "01/09/2021",
         content: "I feel blessed to have seen them in person. What a show! They were just perfection. \
         If there was one day of my life I could relive, this would be it. What an incredible day."
     },
     {
-        image : "image",
+        image : "",
         userName : "Miles Acosta",
         date : "12/20/2020",
         content: "I can't stop listening. Every time I hear one of their songs - the vocals - \
@@ -58,14 +58,23 @@ const commentList = document.getElementById('commentList')
 const commentContainer = document.querySelector('.comment-container')
 
 const addCommentToPage = (comment) => {
-    const profileImg = document.createElement('img')
+    const indComContainer = document.createElement('div')
+    indComContainer.classList.add('comment-container__divider')
+    commentContainer.appendChild(indComContainer)
+
+    const profileImg = document.createElement('div')
     profileImg.classList.add('comment-container__img')
-    commentContainer.appendChild(profileImg)
+    indComContainer.appendChild(profileImg)
+
+
+    //create a div for info, name, date and content
+    const comContainerInfo = document.createElement('div')
+    indComContainer.appendChild(comContainerInfo)
 
     //creat div for comment-container__info
     const containerInfo = document.createElement('div')
     containerInfo.classList.add('comment-container__info')
-    commentContainer.appendChild(containerInfo)
+    comContainerInfo.appendChild(containerInfo)
 
     //create <p> tag for Name and Date
     const comName = document.createElement('p')
@@ -78,32 +87,26 @@ const addCommentToPage = (comment) => {
 
     //create <p> tag and add to <div> comment-container__info
     const comContent = document.createElement('p')
-    comContent.classList.add('.comment-container__content')
-    commentContainer.appendChild(comContent)
+    comContent.classList.add('comment-container__content')
+    comContainerInfo.appendChild(comContent)
 
-    commentContainer.appendChild(containerInfo)
-    
-
-    imageEl.setAttribute('src',comment.image)
-    nameEl.innerText = comment.userName
-    contentEl.innerText = comment.content
-    dateEl.innerText = comment.date
+    // profileImg.setAttribute('src',comment.image)
+    // profileImg.innerText = comment.image
+    comName.innerText = comment.userName
+    comContent.innerText = comment.content
+    comDate.innerText = comment.date
 
     
-    commentEl.appendChild(dateEl)
-    commentEl.appendChild(nameEl)
-    commentEl.appendChild(contentEl)
-    
-     commentList.appendChild(commentEl)
+   
 
-     const commentName = document.querySelector('.comment-container__name')
-     commentName.innerText = comment.userName
+    //  const commentName = document.querySelector('.comment-container__name')
+    //  commentName.innerText = comment.userName
 
-     const commentDate = document.querySelector('.comment-container__date')
-     commentDate.innerText = comment.date
+    //  const commentDate = document.querySelector('.comment-container__date')
+    //  commentDate.innerText = comment.date
 
-     const commentContent = document.querySelector('.comment-container__content')
-     commentContent.innerText = comment.content
+    //  const commentContent = document.querySelector('.comment-container__content')
+    //  commentContent.innerText = comment.content
 
 }
 
