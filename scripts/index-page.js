@@ -32,7 +32,6 @@ const addCommentToPage = (comment) => {
     profileImg.classList.add('comment-container__img')
     indComContainer.appendChild(profileImg)
 
-
     //create a div for info, name, date and content
     const comContainerInfo = document.createElement('div')
     comContainerInfo.classList.add('comment-container__header')
@@ -60,7 +59,6 @@ const addCommentToPage = (comment) => {
     comName.innerText = comment.userName
     comContent.innerText = comment.content
     comDate.innerText = comment.date
-
 }
 
 previousComment.forEach((comment) => {

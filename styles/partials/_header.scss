@@ -8,7 +8,7 @@
     padding: $lf-rt-mobile;
     
     @include tablet {
-    padding: 1rem 1rem 0 1rem;
+        padding: 1rem 1rem 0 1rem;
     }
 
     @include desktop {
@@ -51,7 +51,7 @@
         
         @include tablet {
             gap: 3rem;
-            }
+        }
     }
 
     &__nav-link {

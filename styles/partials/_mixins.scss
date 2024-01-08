@@ -1,9 +1,9 @@
 @use 'variables' as *;
 
 @mixin mobile {
-    @media screen and (min-width: 20rem) {
-      @content;
-    }
+  @media screen and (min-width: 20rem) {
+    @content;
+  }
 }
 
 @mixin tablet {

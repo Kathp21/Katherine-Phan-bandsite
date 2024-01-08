@@ -86,10 +86,6 @@ const addToShows = (show) => {
 
     const btn = document.createElement("button")
     btn.innerText = "BUY TICKETS"
-    btn.addEventListener('click', () => {
-        const clickButton = document.querySelector('.button')
-        console.log("hello")
-    })
     showSection.appendChild(btn)
 
     btnContainer.appendChild(btn)
