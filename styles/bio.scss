@@ -8,7 +8,7 @@
 .hero {
     position: relative;
     height: 40vh;
-    background-image: url(../assets/images/hero-bio.jpg), linear-gradient(rgba(50,50,50,60%), rgba(50,50,50,60%));
+    background-image: url(../assets/images/hero-bio.jpg), linear-gradient(rgba(50,50,50,50%), rgba(50,50,50,50%));
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -52,7 +52,6 @@
         @include tablet {
             padding: 3rem 3rem 0 1.5rem;
             font-size: $section-header;
-            // @include text-bold(2.5rem);
         }
 
         @include desktop {
@@ -148,7 +147,7 @@
     background-color: $color-alabaster;
 
     &__title {
-        margin-top: 0;
+        margin-top: $margin-zero;
         padding-top: 1.25rem;
         padding-left: 3%;
         color: $bandsite-black;
@@ -223,6 +222,10 @@
 
         @include tablet {
             font-size: $section-header;
+        }
+
+        @include desktop {
+            padding-left: 11.5%;
         }
     }
 

@@ -8,7 +8,7 @@
 
     position: relative;
     height: 50vh;
-    background-image: url(../assets/Images/hero-shows.jpg), linear-gradient(rgba(50,50,50,60%), rgba(50,50,50,60%));
+    background-image: url(../assets/Images/hero-shows.jpg), linear-gradient(rgba(50,50,50,50%), rgba(50,50,50,50%));
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -76,15 +76,21 @@
     }
 }
 
-.body-title {
+.show-title {
     padding: 1rem 0 0 1rem;
     margin-bottom: $margin-zero;
     @include text-bold($page-header-mob);
     color: $bandsite-black;
 
     @include tablet {
-        padding: 1.5rem 2rem;
+        padding-left: 0.8rem;
         font-size: $section-header;
+        margin-bottom: 2rem;
+    }
+
+    @include desktop {
+        margin: $margin-zero;
+        padding: 0 8rem;
     }
 }
 
@@ -98,17 +104,22 @@
         justify-content: center;
         margin-right: 11.93rem;
         }
+
+        @include desktop {
+            margin-right: 10rem;
+            margin-left: 3.125rem;
+        }
     }
 
     &__section {
-        padding: $lf-rt-mobile;
+        padding-left: $space-1r;
     }
 
     &__details {
         opacity: 0;
        
         @include tablet {
-            padding-left: $space-2r;
+            padding-left: $space-1r;
             flex: 0.23;
             flex-grow: 1;
             flex-basis: auto;
@@ -116,14 +127,16 @@
             @include text-bold ($sm-txt-tab);
             opacity: 1;
         }
+
+        @include desktop {
+            padding: $padding-zero;
+        }
     }
 
     &__info {
         color: $bandsite-black;
 
         @include tablet {
-            padding-right: 5%;
-            padding-left: 3%;
             flex-grow: 1;
         }
 
@@ -140,6 +153,10 @@
             opacity: 0;
             font-size: 0;
         }
+
+        @include desktop {
+            flex: 1;
+        }
     }
 
     &__btn-container {
@@ -149,7 +166,6 @@
         @include tablet {
             padding: $lf-rt-tablet;
         }
-
     }
 
     &__button {
@@ -167,6 +183,10 @@
         @include tablet {
             width: 9.375rem;
             @include text-bold($btn-tab);
+        }
+
+        @include desktop {
+            margin-top: 1rem;
         }
     }
 
@@ -189,6 +209,29 @@
 
         &--click {
             background-color: $color-mercury;
+        }
+    }
+}
+
+#shows-content {
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include tablet {
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        margin: 3rem;
+        padding-right: 3rem;
+
+        .shows {
+            flex: 1; 
         }
     }
 }

@@ -260,7 +260,7 @@ body {
 .hero-shows {
   position: relative;
   height: 50vh;
-  background-image: url(../assets/Images/hero-shows.jpg), linear-gradient(rgba(50, 50, 50, 0.6), rgba(50, 50, 50, 0.6));
+  background-image: url(../assets/Images/hero-shows.jpg), linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5));
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -333,7 +333,7 @@ body {
   }
 }
 
-.body-title {
+.show-title {
   padding: 1rem 0 0 1rem;
   margin-bottom: 0;
   font-size: 1.5rem;
@@ -341,9 +341,16 @@ body {
   color: #323232;
 }
 @media screen and (min-width: 48rem) {
-  .body-title {
-    padding: 1.5rem 2rem;
+  .show-title {
+    padding-left: 0.8rem;
     font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .show-title {
+    margin: 0;
+    padding: 0 8rem;
   }
 }
 
@@ -357,15 +364,21 @@ body {
     margin-right: 11.93rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .shows__info-container {
+    margin-right: 10rem;
+    margin-left: 3.125rem;
+  }
+}
 .shows__section {
-  padding: 0 1rem;
+  padding-left: 1rem;
 }
 .shows__details {
   opacity: 0;
 }
 @media screen and (min-width: 48rem) {
   .shows__details {
-    padding-left: 2rem;
+    padding-left: 1rem;
     flex: 0.23;
     flex-grow: 1;
     flex-basis: auto;
@@ -375,13 +388,16 @@ body {
     opacity: 1;
   }
 }
+@media screen and (min-width: 80rem) {
+  .shows__details {
+    padding: 0;
+  }
+}
 .shows__info {
   color: #323232;
 }
 @media screen and (min-width: 48rem) {
   .shows__info {
-    padding-right: 5%;
-    padding-left: 3%;
     flex-grow: 1;
   }
 }
@@ -398,6 +414,11 @@ body {
   .shows__data {
     opacity: 0;
     font-size: 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows__data {
+    flex: 1;
   }
 }
 .shows__btn-container {
@@ -435,6 +456,11 @@ body {
     font-weight: 600;
   }
 }
+@media screen and (min-width: 80rem) {
+  .shows__button {
+    margin-top: 1rem;
+  }
+}
 .shows__divider {
   padding: 0 1rem;
   border-bottom: 1px solid #e1e1e1;
@@ -452,4 +478,28 @@ body {
 }
 .shows__section--click {
   background-color: #e1e1e1;
+}
+
+@media screen and (min-width: 20rem) {
+  #shows-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 48rem) {
+  #shows-content {
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  #shows-content {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+    padding-right: 3rem;
+  }
+  #shows-content .shows {
+    flex: 1;
+  }
 }/*# sourceMappingURL=shows.css.map */
