@@ -370,6 +370,11 @@ body {
     margin-left: 3.125rem;
   }
 }
+@media screen and (min-width: 93.75rem) {
+  .shows__info-container {
+    margin: 0 6.25rem;
+  }
+}
 .shows__section {
   padding-left: 1rem;
 }

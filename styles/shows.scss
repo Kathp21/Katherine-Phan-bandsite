@@ -109,6 +109,10 @@
             margin-right: 10rem;
             margin-left: 3.125rem;
         }
+
+        @include big-desktop {
+            margin: 0 6.25rem;
+        }
     }
 
     &__section {

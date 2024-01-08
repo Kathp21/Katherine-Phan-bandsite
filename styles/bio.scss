@@ -214,6 +214,10 @@
         @include desktop {
             padding: 0 21rem;
         }
+
+        @include big-desktop{
+            padding: 0 26rem;
+        }
     }
 
     &__title {
@@ -229,9 +233,12 @@
         }
     }
 
+    &__section-div {
+        border-bottom: $line-divider;
+    }
+
     &__area {
         display: flex;
-        border-bottom: $line-divider;
 
         @include desktop {
             justify-content: center;
@@ -258,6 +265,11 @@
     &__name {
         padding: 0.3rem;
         color: $color-silver;
+        @include text-demi($sm-txt-mob);
+
+        @include tablet {
+            font-size: $sm-txt-tab;
+        }
     }
 
     &__btn {
@@ -349,6 +361,15 @@
         }
     }
 
+    &__line {
+        display: flex;
+        border-bottom: $line-divider;
+
+        @include desktop {
+            width: $fifty-percent;
+        }
+    }
+
     &__header {
         flex: 1;
     }
@@ -373,14 +394,21 @@
     }
 
     &__name {
+        @include text-bold($sm-txt-mob);
+        
         @include tablet {
             margin-top: $margin-cmt-tab;
+            font-size: $sm-txt-tab;
         }
     }
 
     &__date {
+        color: $color-silver;
+        @include text-demi($sm-txt-mob);
+
         @include tablet {
             margin-top: $margin-cmt-tab;
+            font-size: $sm-txt-tab;
         }
     }
 
@@ -391,9 +419,13 @@
 
     &__content {
         margin-top: $margin-zero;
+        line-height: $ln-height-mob;
+        @include text-regular($sm-txt-mob);
 
         @include tablet {
             margin-bottom: $margin-cmt-tab;
+            font-size: $sm-txt-tab;
+            line-height: $ln-H-body-tab;
         }
     }
 }

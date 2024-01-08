@@ -18,6 +18,12 @@
   }
 }
 
+@mixin big-desktop {
+  @media screen and (min-width: 93.75rem) {
+    @content;
+  }
+}
+
 @mixin text-regular($font-size) {
   font-size: $font-size;
   font-weight: 400;

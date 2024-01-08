@@ -23,6 +23,10 @@ const previousComment = [
 
 const commentContainer = document.querySelector('.comment-container')
 
+const divider = document.createElement('div')
+divider.classList.add('comment-container__line')
+commentContainer.appendChild(divider)
+
 const addCommentToPage = (comment) => {
     const indComContainer = document.createElement('div')
     indComContainer.classList.add('comment-container__divider')
