@@ -5,7 +5,7 @@
 // Header section
 .header {
     background-color: $bandsite-black;
-    padding: 0 1rem;
+    padding: $lf-rt-mobile;
     
     @include tablet {
     padding: 1rem 1rem 0 1rem;
@@ -33,7 +33,7 @@
         margin-top: 5%;
 
         @include tablet {
-            margin-top: 0;
+            margin-top: $margin-zero;
             margin-left: 2%;
         }
     }
@@ -46,8 +46,8 @@
         display: flex;
         justify-content: space-around;
         list-style: none;
-        padding-left: 0;
-        margin-bottom: 0;
+        padding-left: $padding-zero;
+        margin-bottom: $margin-zero;
         
         @include tablet {
             gap: 3rem;
@@ -73,6 +73,10 @@
             @include tablet {
                 padding-bottom: 30%;
             }
+        }
+
+        &--inactive {
+            color: $color-mercury;
         }
     }
 }

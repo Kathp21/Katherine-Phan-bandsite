@@ -27,10 +27,10 @@
     &__text {
         color: $color-white;
         margin-left: 5%;
-        @include text-bold(1.5rem);
+        @include text-bold($page-header-mob);
 
         @include tablet {
-            @include text-bold(3.75rem);
+            font-size: $page-header;
         }
 
         @include desktop {
@@ -44,14 +44,15 @@
 
     &__title {
         padding: 1.5rem 0 1rem 1rem;
-        margin: 0;
+        margin: $margin-zero;
         line-height: 44px;
         color: $bandsite-black;
-        @include text-bold(1.5rem);
+        @include text-bold($page-header-mob);
 
         @include tablet {
             padding: 3rem 3rem 0 1.5rem;
-            @include text-bold(2.5rem);
+            font-size: $section-header;
+            // @include text-bold(2.5rem);
         }
 
         @include desktop {
@@ -61,18 +62,15 @@
 
     &__image {
         width: 100%;
-        // height: 30vh; 
         object-fit: cover; 
         margin: 0 auto;
         padding: 0 1rem;
 
         @include tablet {
-            // height: 50vh;
             padding: 2rem 4rem 2.5rem 4rem;
         }
 
         @include desktop {
-            // height: 58vh;
             width: 100vw;
             padding: 3% 20% 3% 20%;
         }
@@ -94,34 +92,34 @@
 
     &__text {
         @include tablet {
-        margin-top: 0;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        margin-bottom: 1rem;
+        margin-top: $margin-zero;
+        font-size: $subheader-tab;
+        line-height: $ln-height-tab;
+        margin-bottom: $space-1r;
         }
     }
 
     &__footer {
-        margin-top: 0;
+        margin-top: $margin-zero;
     }
 }
 
 .band {
-    margin: 0 1rem;
+    margin: $lf-rt-mobile;
     font-size: 0.9rem;
-    line-height: 1.125rem;
+    line-height: $ln-height-mob;
 
     &__title {
-        margin-top: 0;
-        line-height: 1.125rem;
-        @include text-demi(0.875rem);
+        margin-top: $margin-zero;
+        line-height: $ln-height-mob;
+        @include text-demi($subheader-mob);
         
         @include tablet {
-            line-height: 2rem;
+            line-height: $ln-height-tab;
             padding-left: 3rem;
-            margin-bottom: 0;
+            margin-bottom: $margin-zero;
             padding-top: 1.5rem;
-            @include text-bold(1.5rem);
+            @include text-bold($subheader-tab);
         }
 
         @include desktop {
@@ -130,14 +128,14 @@
     }
 
     &__text {
-        @include text-regular(0.813rem);
+        @include text-regular($sm-txt-mob);
 
         @include tablet {
             padding: 0 3rem 1rem 3rem;
             display: flex;
             gap: 2rem;
-            @include text-regular(0.875rem);
-            line-height: 1.375rem;
+            font-size: $sm-txt-tab;
+            line-height: $ln-H-body-tab;
         }
 
         @include desktop {
@@ -154,13 +152,13 @@
         padding-top: 1.25rem;
         padding-left: 3%;
         color: $bandsite-black;
-        @include text-bold(1.5rem);
+        @include text-bold($page-header-mob);
 
         @include tablet {
             padding-left: 1.5rem;
             padding-top: 5%;
-            line-height: 2rem;
-            @include text-bold(2.25rem);
+            line-height: $ln-height-tab;
+            font-size: $section-header;
         }
 
         @include desktop {
@@ -184,22 +182,19 @@
 
     &__items {
         width: 100%;
-        // height: 100%;
-        padding:0 1rem;
-        padding-bottom: 1rem;
+        padding: $lf-rt-mobile;
+        padding-bottom: $space-1r;
 
         @include tablet {
-            // height: 20vh;
             width: 31vw;
-            padding-right: 0;
+            padding-right: $padding-zero;
             padding-bottom: 1.3rem;
         }
 
         @include desktop {
-            // height: 27vh;
             width: 26vw;
-            padding-bottom: 2rem;
-            padding-left: 0;
+            padding-bottom: $space-2r;
+            padding-left: $padding-zero;
         }
     }
 }
@@ -216,6 +211,10 @@
         @include tablet {
         padding: $space-cmt-tab;
         }
+
+        @include desktop {
+            padding: 0 21rem;
+        }
     }
 
     &__title {
@@ -230,14 +229,22 @@
     &__area {
         display: flex;
         border-bottom: $line-divider;
+
+        @include desktop {
+            justify-content: center;
+        }
     }
 
     &__profile {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        width: $avarta-mob;
+        height: $avarta-mob;
+        border-radius: $fifty-percent;
         margin: 1.5rem 1rem 0 0;
 
+        @include tablet {
+            width: $avarta-tab;
+            height: $avarta-tab; 
+        }
     }
 
     &__container {
@@ -272,15 +279,6 @@
             width: $btn-width-tab;
             font-size: $btn-tab;
         }
-    }
-
-    &__active-state {
-        border: 1px solid $bandsite-black;
-    }
-
-    &__error {
-        border: 1px solid;
-        border-color: #FFA500; // This is the hex code for orange, for example.
     }
 }
 
@@ -319,13 +317,21 @@
     height: $form-mob;
 
     @include tablet {
-    width: 65vw;
-    height: $form-tab;
+        width: 65vw;
+        height: $form-tab;
+    }
+
+    @include desktop {
+        width: 40vw;
     }
 }
 
 .comment-container {
-    // padding: $lf-rt-mobile;
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     @include tablet {
         padding: $space-cmt-tab;
@@ -334,6 +340,10 @@
     &__divider {
         display: flex;
         border-bottom: $line-divider;
+
+        @include desktop {
+            width: $fifty-percent;
+        }
     }
 
     &__header {
@@ -341,16 +351,34 @@
     }
 
     &__img {
-        width: 2.25rem;
-        height: 2.25rem;
+        width: $avarta-mob;
+        height: $avarta-mob;
         background-color: $color-mercury;
-        border-radius: 50%; 
+        border-radius: $fifty-percent; 
         border: $space-1r solid $color-mercury; 
         flex-shrink: 0;
         flex-grow: 0;
         flex-basis: auto;
         margin-top: $space-1r;
         margin-right: $space-1r;
+
+        @include tablet {
+            width: $avarta-tab;
+            height: $avarta-tab;
+            margin-top: $space-2r;
+        }
+    }
+
+    &__name {
+        @include tablet {
+            margin-top: $margin-cmt-tab;
+        }
+    }
+
+    &__date {
+        @include tablet {
+            margin-top: $margin-cmt-tab;
+        }
     }
 
     &__info {
@@ -359,6 +387,10 @@
     }
 
     &__content {
-        margin-top: 0;
+        margin-top: $margin-zero;
+
+        @include tablet {
+            margin-bottom: $margin-cmt-tab;
+        }
     }
 }

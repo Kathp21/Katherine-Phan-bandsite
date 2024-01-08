@@ -23,39 +23,62 @@
     }
 
     @include desktop {
-        height: 75vh;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: $margin-zero;
     }
 
     &__text {
         color: $color-white;
+        @include text-bold($subheader-mob);
+
+        @include tablet {
+            font-size: $subheader-tab;
+        }
     }
 
     &__title {
         color: $color-white;
-        margin: 0;
+        margin: $margin-zero;
         width: 75%;
         @include text-bold($page-header-mob);
 
         @include tablet {
             font-size: $page-header;
         }
+
+        @include desktop {
+            width: 36vw;
+        }
+    }
+
+    &__music {
+        @include desktop {
+            padding-top: 5rem;
+        }
     }
 
     &__soundcloud {
-        width: 100vw;
+        width: 90vw;
         margin-top: 10%;
+        border-radius: 4px;
 
         @include tablet {
             width: 52vw;
-            height: 25vh;
             margin: $space-2r 0;
+        }
+
+        @include desktop {
+            width: 32vw;
         }
     }
 }
 
 .body-title {
     padding: 1rem 0 0 1rem;
-    margin-bottom: 0;
+    margin-bottom: $margin-zero;
     @include text-bold($page-header-mob);
     color: $bandsite-black;
 
@@ -85,7 +108,7 @@
         opacity: 0;
        
         @include tablet {
-            padding-left: 2rem;
+            padding-left: $space-2r;
             flex: 0.23;
             flex-grow: 1;
             flex-basis: auto;
@@ -105,7 +128,7 @@
         }
 
         &--bold {
-            @include text-bold(0.875rem);
+            @include text-bold($subheader-mob);
         }
     }
 
@@ -148,7 +171,7 @@
     }
 
     &__divider {
-        padding: 0 1rem; 
+        padding: $lf-rt-mobile; 
         border-bottom: $line-divider;
     }
 

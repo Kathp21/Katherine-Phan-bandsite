@@ -19,11 +19,11 @@
         }
 
         @include desktop {
-        display: flex;
-        align-items: baseline;
-        justify-content: flex-start;
-        padding-top: 3%;
-        padding-left: 12%;
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            padding-top: 3%;
+            padding-left: 12%;
         }
     }
 
@@ -31,23 +31,22 @@
         color: $color-white;
         padding: 1.5rem 0 0 1rem;
         margin-bottom: 1.5rem;
-        margin-top: 0;
-        @include text-bold(1.5rem);
+        margin-top: $margin-zero;
+        @include text-bold($page-header-mob);
 
         @include tablet {
-            padding-left: 0;
-            @include text-bold(2.25rem)
+            padding-left: $padding-zero;
+            font-size: $section-header;
         }
 
         @include desktop {
-            padding-left: 0;
+            padding-left: $padding-zero;
         }
     }
 
     &__social-icon {
         display: flex;
         justify-content: flex-start;
-        // padding-right: 60%;
 
         @include tablet {
             padding-right: 30%;
@@ -60,8 +59,7 @@
     }
 
     &__icon {
-            // padding-left: 16%;
-            padding: 0 1rem;
+        padding: $lf-rt-mobile;
     }
 
     &__logo {
@@ -96,32 +94,32 @@
     }
 
     &__info {
-        line-height: 1.125rem;
-        @include text-regular(0.813rem);
+        line-height: $ln-height-mob;
+        @include text-regular($sm-txt-mob);
 
         @include tablet {
             line-height: 1.25rem;
-            @include text-regular(0.875rem);
+            font-size: $sm-txt-tab;
             padding-right: 10%;
         }
     }
 
     &__name {
-        margin: 0;
-        @include text-bold(0.813rem);
+        margin: $margin-zero;
+        @include text-bold($sm-txt-mob);
 
         @include tablet {
-            @include text-bold(0.875rem);
+            font-size: $sm-txt-tab;
         }
     }
     &__details {
-        margin-top: 0;
+        margin-top: $margin-zero;
         font-weight: 600;
     }
 
     &__logo-container {
         color: $color-white;
-        padding: 1rem;
+        padding: $space-1r;
     }
    
     &__logo-name {
@@ -129,23 +127,23 @@
 
         @include tablet {
         opacity: 0;
-        margin: 0;
+        margin: $margin-zero;
         font-size: 0;
         }
     }
 
     &__copyright {
         color: $color-white;
-        margin-bottom: 0;
-        @include text-regular(0.813rem);
-        line-height: 1.125rem;
+        margin-bottom: $margin-zero;
+        @include text-regular($sm-txt-mob);
+        line-height: $ln-height-mob;
 
         @include tablet {
-            margin-top: 0;
+            margin-top: $margin-zero;
             margin-bottom: 3%;
             padding-left: 3.3%;
-            line-height: 1.375rem;
-            @include text-regular(0.875rem)  
+            line-height: $ln-H-body-tab;
+            font-size: $sm-txt-tab;  
         }
 
         @include desktop {

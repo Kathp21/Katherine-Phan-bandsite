@@ -1,5 +1,20 @@
 const shows = [
     {
+        date: "Mon Sept 06 2021",
+        venue: "Ronald Lane",
+        location: "San Francisco, CA"
+    },
+    {
+        date: "Tue Sept 21 2021",
+        venue: "Pier 3 East",
+        location: "San Francisco, CA"
+    },
+    {
+        date: "Fri Oct 15 2021",
+        venue: "View Lounge",
+        location: "San Francisco, CA"
+    },
+    {
         date: "Sat Nov 06 2021",
         venue: "Hyatt Agency",
         location: "San Francisco, CA"
@@ -56,16 +71,6 @@ const addToShows = (show) => {
 
     gateway.appendChild(showSection)
 
-    // //tablet
-    // const showInfoTablet = document.createElement('div')
-    // showInfoTablet.classList.add('shows__info-container')
-    // gateway.appendChild(showInfoTablet)
-    
-    // showInfoTablet.appendChild(showDate)
-    // showInfoTablet.appendChild(showDateEl)
-    
-
-
     showSection.addEventListener('click', (event) => {
         const clickedShows = document.querySelectorAll('.shows__section--click')
         clickedShows.forEach((show) => {
@@ -74,7 +79,6 @@ const addToShows = (show) => {
 
         showSection.classList.add('shows__section--click')
     })
-
 
     //Button
     const btnContainer = document.createElement("div")
@@ -90,11 +94,11 @@ const addToShows = (show) => {
 
     btnContainer.appendChild(btn)
 
-//Style button
+    //Style button
     btn.classList.add("shows__button")
     btnContainer.classList.add("shows__btn-container")
 
-// Add Div for underline
+    // Add Div for underline
     const borderBottom = document.createElement('div')
     borderBottom.classList.add('shows__divider')
     gateway.appendChild(borderBottom)
