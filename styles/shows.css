@@ -383,14 +383,17 @@ body {
 }
 @media screen and (min-width: 48rem) {
   .shows__details {
-    padding-left: 1rem;
+    padding-left: 0;
     flex: 0.23;
     flex-grow: 1;
-    flex-basis: auto;
     color: #AFAFAF;
     font-size: 0.875rem;
     font-weight: 600;
     opacity: 1;
+    margin-right: 24px;
+  }
+  .shows__details--padding {
+    margin-right: 10px;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -410,6 +413,11 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
 }
+@media screen and (min-width: 80rem) {
+  .shows__info {
+    max-width: 10rem;
+  }
+}
 .shows__data {
   color: #AFAFAF;
   font-size: 0.813rem;
@@ -424,6 +432,7 @@ body {
 @media screen and (min-width: 80rem) {
   .shows__data {
     flex: 1;
+    max-width: 10rem;
   }
 }
 .shows__btn-container {
@@ -475,7 +484,7 @@ body {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding-left: 0.8rem;
+    padding: 0;
   }
 }
 .shows__section:hover {

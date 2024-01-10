@@ -598,6 +598,14 @@ body {
   border: 1px solid #323232;
 }
 
+::-moz-placeholder {
+  color: #000000;
+}
+
+::placeholder {
+  color: #000000;
+}
+
 #addComment {
   font-size: 0.875rem;
   font-weight: 500;

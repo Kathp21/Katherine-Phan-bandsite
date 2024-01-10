@@ -71,6 +71,25 @@ const addToShows = (show) => {
 
     gateway.appendChild(showSection)
 
+    // const showDesktop = document.getElementById('shows__desktop-container')
+    // showDesktop.appendChild(showSection)
+    // showDesktop.appendChild(showDateEl)
+    // showDesktop.appendChild(showVenueEl)
+    // showDesktop.appendChild(showLocationEl)
+    // showDesktop.appendChild(showDate)
+    // showDesktop.appendChild(showVenue)
+    // showDesktop.appendChild(showLocation)
+    // showSection.appendChild(showDate)
+    // showSection.appendChild(showDateEl)
+
+    // showSection.appendChild(showVenue)
+    // showSection.appendChild(showVenueEl)
+
+    // showSection.appendChild(showLocation)
+    // showSection.appendChild(showLocationEl)
+
+    // gateway.appendChild(showDesktop)
+
     showSection.addEventListener('click', (event) => {
         const clickedShows = document.querySelectorAll('.shows__section--click')
         clickedShows.forEach((show) => {
@@ -87,6 +106,7 @@ const addToShows = (show) => {
     const btn = document.createElement("button")
     btn.innerText = "BUY TICKETS"
     showSection.appendChild(btn)
+    // showDesktop.appendChild(btn)
 
     btnContainer.appendChild(btn)
 
@@ -98,6 +118,7 @@ const addToShows = (show) => {
     const borderBottom = document.createElement('div')
     borderBottom.classList.add('shows__divider')
     gateway.appendChild(borderBottom)
+    // showDesktop.appendChild(borderBottom)
 }
 
 shows.forEach ((show) => {

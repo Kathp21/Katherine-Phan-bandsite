@@ -123,13 +123,18 @@
         opacity: 0;
        
         @include tablet {
-            padding-left: $space-1r;
+            padding-left: 0;
             flex: 0.23;
             flex-grow: 1;
-            flex-basis: auto;
+            // flex-basis: auto;
             color:$color-silver;
             @include text-bold ($sm-txt-tab);
             opacity: 1;
+            margin-right: 24px;
+
+            &--padding {
+                margin-right: 10px;
+            }
         }
 
         @include desktop {
@@ -147,6 +152,10 @@
         &--bold {
             @include text-bold($subheader-mob);
         }
+
+        @include desktop {
+            max-width: 10rem;
+        }
     }
 
     &__data {
@@ -160,6 +169,7 @@
 
         @include desktop {
             flex: 1;
+            max-width: 10rem;
         }
     }
 
@@ -204,7 +214,8 @@
             display: flex;
             align-items: baseline;
             justify-content: space-between;
-            padding-left: 0.8rem;
+            // padding-left: 0.8rem;
+            padding: $padding-zero;
         }
 
         &:hover {
