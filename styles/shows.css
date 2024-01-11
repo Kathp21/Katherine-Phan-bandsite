@@ -367,7 +367,7 @@ body {
 @media screen and (min-width: 80rem) {
   .shows__info-container {
     margin-right: 10rem;
-    margin-left: 3.125rem;
+    margin-left: 2.125rem;
   }
 }
 @media screen and (min-width: 93.75rem) {
