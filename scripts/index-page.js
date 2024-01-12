@@ -1,25 +1,47 @@
-const previousComment = [
-    {
-        userName : "Connor Walton",
-        date : "02/17/2021",
-        content: "This is art. This is inexplicable magic expressed in the purest way, \
-        everything that makes up this majestic work deserves reverence. \
-        Let us appreciate this for what it is and what it contains."
-    },
-    {
-        userName : "Emilie Beach",
-        date : "01/09/2021",
-        content: "I feel blessed to have seen them in person. What a show! They were just perfection. \
-        If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-    {
-        userName : "Miles Acosta",
-        date : "12/20/2020",
-        content: "I can't stop listening. Every time I hear one of their songs - the vocals - \
-        it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity.\
-         Can't get enough."
-    }
-]
+// const previousComment = [
+//     {
+//         userName : "Connor Walton",
+//         date : "02/17/2021",
+//         content: "This is art. This is inexplicable magic expressed in the purest way, \
+//         everything that makes up this majestic work deserves reverence. \
+//         Let us appreciate this for what it is and what it contains."
+//     },
+//     {
+//         userName : "Emilie Beach",
+//         date : "01/09/2021",
+//         content: "I feel blessed to have seen them in person. What a show! They were just perfection. \
+//         If there was one day of my life I could relive, this would be it. What an incredible day."
+//     },
+//     {
+//         userName : "Miles Acosta",
+//         date : "12/20/2020",
+//         content: "I can't stop listening. Every time I hear one of their songs - the vocals - \
+//         it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity.\
+//          Can't get enough."
+//     }
+// ]
+
+import { BandSiteApi } from "./band-site-api.js"
+
+//Get comments
+const api = new BandSiteApi("e666d163-2fe5-40c6-b626-ea9b5931346e")
+
+const displayComments = async () => {
+    const comments = await api.getComments()
+    comments.forEach((comment) => {
+        addCommentToPage(comment)
+    })
+}
+
+displayComments()
+
+//Post comments
+const postComment = async (comment) => {
+    const postComment = await api.postComment(comment)
+    // postComments.forEach((comment) => {
+    //     addCommentToPage(comment)
+    // })
+}
 
 const commentContainer = document.querySelector('.comment-container')
 
@@ -60,14 +82,10 @@ const addCommentToPage = (comment) => {
     comContent.classList.add('comment-container__content')
     comContainerInfo.appendChild(comContent)
 
-    comName.innerText = comment.userName
-    comContent.innerText = comment.content
-    comDate.innerText = comment.date
+    comName.innerText = comment.name
+    comContent.innerText = comment.comment
+    comDate.innerText = formatTimestamp(comment.timestamp)
 }
-
-previousComment.forEach((comment) => {
-    addCommentToPage(comment)
-})
 
 //Form
 const buildCommentList = (commentList) => {
@@ -78,14 +96,11 @@ const buildCommentList = (commentList) => {
     })
 }
 
-const addNewComment = document.querySelector('.comment__section')
-addNewComment.addEventListener('submit', (event) => {
-    event.preventDefault()
-
-    const currentDate = new Date()
-    let day = currentDate.getDate()
-    let month = currentDate.getMonth() + 1
-    const year = currentDate.getFullYear()
+function formatTimestamp(timestamp) {
+    let date = new Date(timestamp)
+    let day = date.getDate()
+    let month =date.getMonth() + 1
+    const year = date.getFullYear()
     
     if (day < 10) {
         day = '0' + day
@@ -94,17 +109,25 @@ addNewComment.addEventListener('submit', (event) => {
     if (month < 10) {
         month = '0' + month
     }
+    return `${month}/${day}/${year}`
+}
+
+const addNewComment = document.querySelector('.comment__section')
+addNewComment.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    const currentTimestamp = Date.now()
 
     const newComment = {
-        userName: event.target.userName.value,
-        content: event.target.addComment.value,
-        date: month + '/' + day + '/' + year
+        name: event.target.userName.value,
+        comment: event.target.addComment.value,
+        timestamp: formatTimestamp(currentTimestamp)
     }
-    
+    postComment(newComment)
+
     event.target.reset()
     
-    previousComment.unshift(newComment)
-    buildCommentList(previousComment)
+    // buildCommentList(comment)
 })
 
 //Clicked Button
