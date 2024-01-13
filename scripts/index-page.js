@@ -21,7 +21,7 @@
 //     }
 // ]
 
-import { BandSiteApi } from "./band-site-api.js"
+import { BandSiteApi } from "./band-site-api.js";
 
 //Get comments
 const api = new BandSiteApi("e666d163-2fe5-40c6-b626-ea9b5931346e")
