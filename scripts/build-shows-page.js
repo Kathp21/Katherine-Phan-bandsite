@@ -1,36 +1,3 @@
-// const shows = [
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Tue Sept 21 2021",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Oct 15 2021",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Sat Nov 06 2021",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Fri Nov 26 2021",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Wed Dec 15 2021",
-//         venue: "Press Club",
-//         location: "San Francisco, CA"
-//     }
-// ]
-
 import { BandSiteApi } from "./band-site-api.js";
 
 const api = new BandSiteApi("e666d163-2fe5-40c6-b626-ea9b5931346e")
@@ -64,7 +31,6 @@ const gateway = document.querySelector(".shows");
 const addToShows = (show) => {
     const showSection = document.createElement('div')
     showSection.classList.add('shows__section')
-    // gateway.appendChild(showSection)
 
     const showDate = document.createElement('p')
     const showVenue = document.createElement('p')
@@ -81,20 +47,6 @@ const addToShows = (show) => {
     showDateEl.classList.add('shows__info--bold')
     showVenueEl.classList.add('shows__info')
     showLocationEl.classList.add('shows__info')
-
-    // const date = show.date
-    // const dateOfShow = new Date(date)
-    // const formattedDate = dateOfShow.toLocalDateString('en-CA', {
-    //     weekday: 'long',
-    //     year: 'numeric',
-    //     month: 'short',
-    //     day: 'numeric',
-    // })
-
-    // console.log(show.date)
-
-
-
 
     showDate.innerText = "DATE"
     showVenue.innerText = "VENUE"
@@ -114,25 +66,6 @@ const addToShows = (show) => {
 
     gateway.appendChild(showSection)
 
-    // const showDesktop = document.getElementById('shows__desktop-container')
-    // showDesktop.appendChild(showSection)
-    // showDesktop.appendChild(showDateEl)
-    // showDesktop.appendChild(showVenueEl)
-    // showDesktop.appendChild(showLocationEl)
-    // showDesktop.appendChild(showDate)
-    // showDesktop.appendChild(showVenue)
-    // showDesktop.appendChild(showLocation)
-    // showSection.appendChild(showDate)
-    // showSection.appendChild(showDateEl)
-
-    // showSection.appendChild(showVenue)
-    // showSection.appendChild(showVenueEl)
-
-    // showSection.appendChild(showLocation)
-    // showSection.appendChild(showLocationEl)
-
-    // gateway.appendChild(showDesktop)
-
     showSection.addEventListener('click', (event) => {
         const clickedShows = document.querySelectorAll('.shows__section--click')
         clickedShows.forEach((show) => {
@@ -149,7 +82,6 @@ const addToShows = (show) => {
     const btn = document.createElement("button")
     btn.innerText = "BUY TICKETS"
     showSection.appendChild(btn)
-    // showDesktop.appendChild(btn)
 
     btnContainer.appendChild(btn)
 
@@ -161,9 +93,4 @@ const addToShows = (show) => {
     const borderBottom = document.createElement('div')
     borderBottom.classList.add('shows__divider')
     gateway.appendChild(borderBottom)
-    // showDesktop.appendChild(borderBottom)
 }
-
-// shows.forEach ((show) => {
-//     addToShows(show)
-// })

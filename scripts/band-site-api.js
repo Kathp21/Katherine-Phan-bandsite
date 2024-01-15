@@ -48,33 +48,3 @@
         }
     }
  }
-
-
-
-
-
-
-    // deleteComment = async (comment) => {
-    //     try {
-    //         const response = await axios.delete(`${this.baseUrl}/comments/${comment.id}?api_key=${this.apiKey}`, 
-    //             {
-    //                 name: comment.name,
-    //                 comment: comment.comment,
-    //             }
-    //         )
-    //         return response.data
-    //         console.log(response)
-    //     } catch (error) {
-    //         console.error(error.message)
-    //     }
-    // }
-
-
-// const api = new BandSiteApi("e666d163-2fe5-40c6-b626-ea9b5931346e")
-// const comment = { id: "4e98cd71-6904-4b1e-8b41-721e345f1b6a" }
-
-// const deleteCom = async (comment) => {
-//     const comments = await api.deleteComment(comment)
-
-// }
-// deleteCom(comment)
