@@ -23,9 +23,10 @@
 
 import { BandSiteApi } from "./band-site-api.js";
 
-//Get comments
+// Calling the constructor 
 const api = new BandSiteApi("e666d163-2fe5-40c6-b626-ea9b5931346e")
 
+// Get comment
 const displayComments = async () => {
     const comments = await api.getComments()
     comments.forEach((comment) => {
@@ -35,12 +36,12 @@ const displayComments = async () => {
 
 displayComments()
 
-//Post comments
+/* The function is an asynchronous function that take 1 comment. 
+It calls the postComment method inside BandSiteApi. Then the function
+adds the new comment to the bottom of the comment section. */
 const postComment = async (comment) => {
-    const postComment = await api.postComment(comment)
-    // postComments.forEach((comment) => {
-    //     addCommentToPage(comment)
-    // })
+    const newComment = await api.postComment(comment)
+    addCommentOnTopOfPage(newComment)
 }
 
 const commentContainer = document.querySelector('.comment-container')
@@ -49,10 +50,9 @@ const divider = document.createElement('div')
 divider.classList.add('comment-container__line')
 commentContainer.appendChild(divider)
 
-const addCommentToPage = (comment) => {
+const createCommentElement = (comment) => {
     const indComContainer = document.createElement('div')
     indComContainer.classList.add('comment-container__divider')
-    commentContainer.appendChild(indComContainer)
 
     const profileImg = document.createElement('div')
     profileImg.classList.add('comment-container__img')
@@ -85,15 +85,16 @@ const addCommentToPage = (comment) => {
     comName.innerText = comment.name
     comContent.innerText = comment.comment
     comDate.innerText = formatTimestamp(comment.timestamp)
+
+    return indComContainer
 }
 
-//Form
-const buildCommentList = (commentList) => {
-    commentContainer.innerHTML = ""
+const addCommentOnTopOfPage = (comment) => {
+    commentContainer.prepend(createCommentElement(comment))
+}
 
-    commentList.forEach((comment) => {
-        addCommentToPage(comment, commentContainer)
-    })
+const addCommentToPage = (comment) => {
+    commentContainer.appendChild(createCommentElement(comment))
 }
 
 function formatTimestamp(timestamp) {
@@ -124,10 +125,8 @@ addNewComment.addEventListener('submit', (event) => {
         timestamp: formatTimestamp(currentTimestamp)
     }
     postComment(newComment)
-
-    event.target.reset()
     
-    // buildCommentList(comment)
+    event.target.reset()    
 })
 
 //Clicked Button
