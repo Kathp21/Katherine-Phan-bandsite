@@ -19,7 +19,7 @@
 }
 
 @mixin big-desktop {
-  @media screen and (min-width: 93.75rem) {
+  @media screen and (min-width: 90.625rem) {
     @content;
   }
 }

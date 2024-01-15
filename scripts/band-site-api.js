@@ -7,7 +7,6 @@
     getComments = async () => {
         try { 
             const response = await axios.get(`${this.baseUrl}/comments?api_key=${this.apiKey}`)
-            console.log(response)
             return response.data.sort((a, b) => {
                 const timestampA = a.timestamp
                 const timestampB = b.timestamp
@@ -41,7 +40,6 @@
     getShows = async () => {
         try {
             const response = await axios.get(`${this.baseUrl}/showdates?api_key=${this.apiKey}`)
-            console.log(response)
             return response.data
         } catch (error) {
             console.error(error.message)

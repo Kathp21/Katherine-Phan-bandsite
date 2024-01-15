@@ -103,11 +103,13 @@
         display: flex;
         justify-content: center;
         margin-right: 7.93rem;
+        padding-left: 1rem;
         }
 
         @include desktop {
-            margin-right: 0;
-            margin-left: 2rem;
+            padding: $padding-zero;
+            margin-right: $margin-zero;
+            margin-left: $space-2r;
         }
 
         @include big-desktop {
@@ -115,28 +117,20 @@
         }
     }
 
-    &__section {
-        padding-left: $space-1r;
-    }
-
     &__details {
         opacity: 0;
        
         @include tablet {
-            padding-left: 0;
+            padding-left: $padding-zero;
             flex: 1;
             color:$color-silver;
             @include text-bold ($sm-txt-tab);
             opacity: 1;
-
-            &--padding {
-                margin-right: 0;
-            }
         }
 
         @include desktop {
             padding: $padding-zero;
-            margin-right: 0;
+            margin-right: $margin-zero;
         }
     }
 
@@ -149,7 +143,7 @@
         }
         
         @include big-desktop {
-            flex: 0.6;
+            flex: 0.5;
         }
     }
 
@@ -212,11 +206,14 @@
     }
 
     &__section {
+
+        padding: 0 1rem;
+
         @include tablet {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
-            padding: $padding-zero;
+            padding: 0 0 0 1rem;
         }
 
         @include desktop {
@@ -240,8 +237,8 @@
     }
 
     @include tablet {
-        margin-bottom: 2rem;
-        padding: 2rem;
+        margin-bottom: $space-2r;
+        padding: $space-2r;
     }
 
     @include desktop {
