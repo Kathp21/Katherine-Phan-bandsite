@@ -67,8 +67,9 @@ const createCommentElement = (comment) => {
 }
 
 const addCommentOnTopOfPage = (comment) => {
-    const commentElement = createCommentElement(comment)
-    commentContainer.prepend(commentElement)    
+    const commentElement = createCommentElement(comment)  
+    commentContainer.prepend(commentElement)  
+    commentContainer.prepend(divider)  
 }
 
 const addCommentToPage = (comment) => {
